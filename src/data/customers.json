@@ -13,7 +13,7 @@
     "email": "bob.smith@example.com",
     "password": "secure456",
     "phone_number": "+1-555-0102",
-    "profile_picture": "https://via.placeholder.com/150/cccccc/ffffff?text=No+Image"
+    "profile_picture": "https://randomuser.me/api/portraits/men/1.jpg"
   },
   {
     "id": 3,
@@ -37,7 +37,7 @@
     "email": "ethan.hunt@example.com",
     "password": "imfagent",
     "phone_number": "+1-555-0105",
-    "profile_picture": "https://via.placeholder.com/150/cccccc/ffffff?text=No+Image"
+    "profile_picture": "https://randomuser.me/api/portraits/men/1.jpg"
   },
   {
     "id": 6,
@@ -53,7 +53,7 @@
     "email": "george.michaels@example.com",
     "password": "faith1987",
     "phone_number": "+1-555-0107",
-    "profile_picture": "https://via.placeholder.com/150/cccccc/ffffff?text=No+Image"
+    "profile_picture": "https://randomuser.me/api/portraits/men/1.jpg"
   },
   {
     "id": 8,
@@ -69,7 +69,7 @@
     "email": "ian.malcolm@example.com",
     "password": "chaostheory",
     "phone_number": "+1-555-0109",
-    "profile_picture": "https://via.placeholder.com/150/cccccc/ffffff?text=No+Image"
+    "profile_picture": "https://randomuser.me/api/portraits/men/1.jpg"
   },
   {
     "id": 10,
@@ -85,7 +85,7 @@
     "email": "kevin.hart@example.com",
     "password": "comedyking",
     "phone_number": "+1-555-0111",
-    "profile_picture": "https://via.placeholder.com/150/cccccc/ffffff?text=No+Image"
+    "profile_picture": "https://randomuser.me/api/portraits/men/1.jpg"
   },
   {
     "id": 12,
@@ -101,7 +101,7 @@
     "email": "michael.scott@example.com",
     "password": "thatswhatshesaid",
     "phone_number": "+1-555-0113",
-    "profile_picture": "https://via.placeholder.com/150/cccccc/ffffff?text=No+Image"
+    "profile_picture": "https://randomuser.me/api/portraits/men/1.jpg"
   },
   {
     "id": 14,
@@ -117,7 +117,7 @@
     "email": "oscar.isaac@example.com",
     "password": "moonknight",
     "phone_number": "+1-555-0115",
-    "profile_picture": "https://via.placeholder.com/150/cccccc/ffffff?text=No+Image"
+    "profile_picture": "https://randomuser.me/api/portraits/men/1.jpg"
   },
   {
     "id": 16,
@@ -133,7 +133,7 @@
     "email": "quentin.blake@example.com",
     "password": "illustrator",
     "phone_number": "+1-555-0117",
-    "profile_picture": "https://via.placeholder.com/150/cccccc/ffffff?text=No+Image"
+    "profile_picture": "https://randomuser.me/api/portraits/men/1.jpg"
   },
   {
     "id": 18,
@@ -149,7 +149,7 @@
     "email": "sam.wilson@example.com",
     "password": "falcon",
     "phone_number": "+1-555-0119",
-    "profile_picture": "https://via.placeholder.com/150/cccccc/ffffff?text=No+Image"
+    "profile_picture": "https://randomuser.me/api/portraits/men/1.jpg"
   },
   {
     "id": 20,
