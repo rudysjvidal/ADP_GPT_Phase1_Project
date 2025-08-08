@@ -1,0 +1,23 @@
+[
+    { "id": 1, "name": "Alice Johnson", "email": "alice.johnson@example.com", "password": "pass123" },
+    { "id": 2, "name": "Bob Smith", "email": "bob.smith@example.com", "password": "secure456" },
+    { "id": 3, "name": "Charlie Brown", "email": "charlie.brown@example.com", "password": "charlie789" },
+    { "id": 4, "name": "Diana Prince", "email": "diana.prince@example.com", "password": "wonderwoman" },
+    { "id": 5, "name": "Ethan Hunt", "email": "ethan.hunt@example.com", "password": "imfagent" },
+    { "id": 6, "name": "Fiona Gallagher", "email": "fiona.gallagher@example.com", "password": "shameless" },
+    { "id": 7, "name": "George Michaels", "email": "george.michaels@example.com", "password": "faith1987" },
+    { "id": 8, "name": "Hannah Baker", "email": "hannah.baker@example.com", "password": "thirteen" },
+    { "id": 9, "name": "Ian Malcolm", "email": "ian.malcolm@example.com", "password": "chaostheory" },
+    { "id": 10, "name": "Julia Roberts", "email": "julia.roberts@example.com", "password": "prettywoman" },
+    { "id": 11, "name": "Kevin Hart", "email": "kevin.hart@example.com", "password": "comedyking" },
+    { "id": 12, "name": "Laura Palmer", "email": "laura.palmer@example.com", "password": "twinpeaks" },
+    { "id": 13, "name": "Michael Scott", "email": "michael.scott@example.com", "password": "thatswhatshesaid" },
+    { "id": 14, "name": "Nina Simone", "email": "nina.simone@example.com", "password": "feelinggood" },
+    { "id": 15, "name": "Oscar Isaac", "email": "oscar.isaac@example.com", "password": "moonknight" },
+    { "id": 16, "name": "Pam Beesly", "email": "pam.beesly@example.com", "password": "officeart" },
+    { "id": 17, "name": "Quentin Blake", "email": "quentin.blake@example.com", "password": "illustrator" },
+    { "id": 18, "name": "Rachel Green", "email": "rachel.green@example.com", "password": "centralperk" },
+    { "id": 19, "name": "Sam Wilson", "email": "sam.wilson@example.com", "password": "falcon" },
+    { "id": 20, "name": "Tina Fey", "email": "tina.fey@example.com", "password": "30rock" }
+  ]
+  
