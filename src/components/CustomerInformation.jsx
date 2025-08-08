@@ -12,13 +12,13 @@ const CustomerInformation = ({ customers, onRemoveCustomer }) => {
   return (
     <div>
       <h3>Customer Information ({customers.length}/10)</h3>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-6">
         {customers.map((customer) => (
-          <div key={customer.id} className="border border-gray-300 p-4 rounded-lg relative min-h-fit">
+          <div key={customer.id} className="border border-gray-300 p-6 rounded-lg relative min-h-fit w-full">
             {onRemoveCustomer && (
               <button
                 onClick={() => onRemoveCustomer(customer.id)}
-                className="absolute top-2 right-2 w-6 h-6 bg-red-500 text-white rounded-full flex items-center justify-center text-sm hover:bg-red-600 cursor-pointer"
+                className="absolute top-3 right-3 w-6 h-6 bg-red-500 text-white rounded-full flex items-center justify-center text-sm hover:bg-red-600 cursor-pointer"
               >
                 ×
               </button>
@@ -27,15 +27,23 @@ const CustomerInformation = ({ customers, onRemoveCustomer }) => {
               <img 
                 src={customer.profile_picture} 
                 alt={customer.name}
-                className="w-20 h-20 rounded-lg object-cover mb-3"
+                className="w-24 h-24 rounded-lg object-cover mb-4"
               />
               <div className="w-full">
-                <h4 className="text-lg font-semibold mb-2 truncate">{customer.name}</h4>
-                <div className="text-sm space-y-1">
-                  <p><strong>Email:</strong></p>
-                  <p className="break-all text-xs">{customer.email}</p>
-                  <p><strong>Password:</strong> {customer.password}</p>
-                  <p><strong>Phone:</strong> {customer.phone_number}</p>
+                <h4 className="text-lg font-semibold mb-3">{customer.name}</h4>
+                <div className="text-sm space-y-2 text-left">
+                  <div>
+                    <p className="font-semibold">Email:</p>
+                    <p className="text-xs break-words">{customer.email}</p>
+                  </div>
+                  <div>
+                    <p className="font-semibold">Password:</p>
+                    <p>{customer.password}</p>
+                  </div>
+                  <div>
+                    <p className="font-semibold">Phone:</p>
+                    <p>{customer.phone_number}</p>
+                  </div>
                 </div>
               </div>
             </div>

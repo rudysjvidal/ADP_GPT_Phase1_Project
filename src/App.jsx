@@ -1,13 +1,19 @@
-import React from 'react'
-import Dashboard from './components/Dashboard'
-import './App.css'
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import Dashboard from './components/Dashboard';
 
 function App() {
   return (
-    <div className="App">
-      <Dashboard />
-    </div>
-  )
+    <Router>
+      <div className="App">
+        <Routes>
+          <Route path="/" element={<Navigate to="/dashboard" replace />} />
+          <Route path="/dashboard" element={<Dashboard />} />
+        </Routes>
+      </div>
+    </Router>
+  );
 }
 
-export default App
+export default App;
+
