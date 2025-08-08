@@ -11,7 +11,7 @@ const Dashboard = () => {
 
       <main className="max-w-7xl mx-auto px-6 py-8">
         <div className="bg-white rounded-lg shadow-sm border p-6">
-          <h2 className="text-xl font-semibold text-gray-900 mb-4">Customer Records</h2>
+          <h2 className="text-xl font-semibold text-gray-900 mb-4">Customer List</h2>
           <CustomerList />
         </div>
       </main>
