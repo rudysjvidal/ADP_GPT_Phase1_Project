@@ -1,8 +1,18 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react';
+import { Outlet } from 'react-router-dom';
 import NavigationBar from './NavigationBar'
-import CustomerList from './CustomerList'
+//import CustomerList from './CustomerList'
+import customersSeed from '../data/customers.json';
 
 const Dashboard = () => {
+  const [customers, setCustomers] = useState([]);
+
+  useEffect(() => {
+    setCustomers(customersSeed);
+  }, []);
+
+  const addCustomer = (cust) => setCustomers(prev => [...prev, cust]);
+
   return (
     <div className="min-h-screen bg-gray-50">
       <NavigationBar />
@@ -12,7 +22,7 @@ const Dashboard = () => {
           <p className="text-slate-600 text-lg mb-8">Welcome to the ADP System Dashboard</p>
           <div className="bg-white rounded-lg shadow-sm border p-6">
             <h2 className="text-xl font-semibold text-gray-900 mb-4">Customer List</h2>
-            <CustomerList />
+            <Outlet context={{ customers, addCustomer }} />
           </div>
         </div>
       </div>

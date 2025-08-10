@@ -1,9 +1,12 @@
 import React, { useState, useEffect } from 'react'
-import customersData from '../data/customers.json'
+import { useNavigate, useOutletContext } from 'react-router-dom';
+//import customersData from '../data/customers.json'
 import CustomerInformation from './CustomerInformation'
 
 const CustomerList = () => {
-  const customers = customersData
+  const { customers } = useOutletContext();
+  const navigate = useNavigate();
+
   const [selectedCustomers, setSelectedCustomers] = useState([])
   const [currentPage, setCurrentPage] = useState(0)
   const [customersPerPage, setCustomersPerPage] = useState(10)
@@ -59,8 +62,15 @@ const CustomerList = () => {
   return (
     <div className="flex min-h-96">
       <div className="w-3/10 border-r border-gray-300 p-5 flex flex-col">
-        <h3 className="mb-4">Customer List</h3>
-        
+      <div className="mb-4 flex flex-wrap items-center justify-between gap-x-3 gap-y-2">
+            <h3>Customer List</h3>
+            <button
+              onClick={() => navigate('/dashboard/add')}
+              className="px-3 py-1 bg-green-600 text-white rounded"
+            >
+              Add
+            </button>
+          </div>        
         <div className="flex-1 overflow-y-auto">
           <ul className="list-none p-0">
             {currentCustomers.map((customer) => (
