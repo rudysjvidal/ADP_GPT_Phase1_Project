@@ -3,14 +3,17 @@ import { useState } from 'react'
 import NavigationBar from './NavigationBar'
 import { useNavigate } from 'react-router-dom'
 import './Login.css'
+import { useCookies } from 'react-cookie'
 
 const Login = () => {
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
+    const [cookies, setCookie] = useCookies(['admin']);
     const navigate = useNavigate();
 
     const handleLogin = () => {
         if (username == 'admin' && password == 'admin') {
+            setCookie('admin', true, { path: '/' });
             navigate('/dashboard');
         } else {
             alert("Invalid username or password");

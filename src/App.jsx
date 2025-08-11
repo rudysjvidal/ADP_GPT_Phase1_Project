@@ -5,22 +5,34 @@ import CustomerList from './components/CustomerList';
 import AddCustomerForm from './components/AddCustomerForm';
 import Login from './components/Login';
 import UpdateCustomerForm from './components/UpdateCustomerForm';
+import {CookiesProvider} from 'react-cookie';
+import AuthorizeAccess from './components/AuthorizeAccess';
 
 function App() {
   return (
+    <CookiesProvider>
     <Router>
       <div className="App">
         <Routes>
           <Route path="/" element={<Navigate to="/dashboard" replace />} />
           <Route path="/dashboard" element={<Dashboard />}>
             <Route index element={<CustomerList />} />
-            <Route path="add" element={<AddCustomerForm />} />
-            <Route path=":id/update" element={<UpdateCustomerForm />} />
+            <Route path="add" element={
+              <AuthorizeAccess>
+                <AddCustomerForm />
+              </AuthorizeAccess>
+              } />
+            <Route path=":id/update" element={
+              <AuthorizeAccess>
+                <UpdateCustomerForm />
+              </AuthorizeAccess>
+              } />
           </Route>
           <Route path="/login" element={<Login />} />
         </Routes>
       </div>
     </Router>
+    </CookiesProvider>
   );
 }
 
