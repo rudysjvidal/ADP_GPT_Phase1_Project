@@ -2,26 +2,31 @@ import React, { useEffect, useState } from 'react';
 import { Outlet } from 'react-router-dom';
 import NavigationBar from './NavigationBar'
 //import CustomerList from './CustomerList'
-import customersSeed from '../data/customers.json';
-
+import * as customersApi from '../api/customers';
 
 const Dashboard = () => {
   const [customers, setCustomers] = useState([]);
 
-  //Add Customer Handler
+  //Grabs all the Customer data
   useEffect(() => {
-    setCustomers(customersSeed);
+    customersApi.getAll().then(setCustomers);
   }, []);
-
-  const addCustomer = (cust) => setCustomers(prev => [...prev, cust]);
-
+  
+  //Add Customer Handler
+  const addCustomer = async (cust) => {
+    const created = await customersApi.create(cust);
+    setCustomers(prev => [...prev, created]);// refreshes the state after customer is added
+  };
+  
   //Update Customer Handler
-  const updateCustomer = (cust) => {
-    setCustomers(prev => prev.map(c => (c.id === cust.id ? cust : c)));
+  const updateCustomer = async (cust) => {
+    const updated = await customersApi.update(cust);
+    setCustomers(prev => prev.map(c => c.id === updated.id ? updated : c));
   };
 
   //Delete Customer Handler
-  const deleteCustomer = (id) => {
+  const deleteCustomer = async (id) => {
+    await customersApi.remove(id);
     setCustomers(prev => prev.filter(c => c.id !== id));
   };
 

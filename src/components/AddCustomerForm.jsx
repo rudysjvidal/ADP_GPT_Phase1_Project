@@ -31,11 +31,20 @@ export default function AddCustomerForm() {
     return Object.keys(e).length === 0;
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     if (!validate()) return;
-    addCustomer({ id: Date.now(), ...values }); // simple id; swap for UUID/memdb later
-    navigate("/dashboard"); // go back to the list
+
+    const payload = {
+      name: values.name.trim(),
+      email: values.email.trim(),
+      password: values.password,
+      phone_number: values.phone_number,
+      profile_picture: (values.profile_picture || '').trim(),
+    };
+
+    await addCustomer(payload);
+    navigate("/dashboard");
   };
 
   return (
