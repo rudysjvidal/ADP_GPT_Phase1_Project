@@ -1,6 +1,9 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom';
 
 const CustomerInformation = ({ customers, onRemoveCustomer }) => {
+  const navigate = useNavigate();
+
   if (customers.length === 0) {
     return (
       <div className="text-center py-10">
@@ -45,6 +48,16 @@ const CustomerInformation = ({ customers, onRemoveCustomer }) => {
                     <p>{customer.phone_number}</p>
                   </div>
                 </div>
+
+                <div className="mt-4 flex justify-center">
+                  <button
+                    onClick={() => navigate(`/dashboard/${customer.id}/update`)}
+                    className="px-3 py-1 bg-amber-600 text-white rounded"
+                  >
+                    Update
+                  </button>
+                </div>
+
               </div>
             </div>
           </div>

@@ -4,6 +4,7 @@ import Dashboard from './components/Dashboard';
 import CustomerList from './components/CustomerList';
 import AddCustomerForm from './components/AddCustomerForm';
 import Login from './components/Login';
+import UpdateCustomerForm from './components/UpdateCustomerForm';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
           <Route path="/dashboard" element={<Dashboard />}>
             <Route index element={<CustomerList />} />
             <Route path="add" element={<AddCustomerForm />} />
+            <Route path=":id/update" element={<UpdateCustomerForm />} />
           </Route>
           <Route path="/login" element={<Login />} />
         </Routes>
