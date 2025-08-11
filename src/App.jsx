@@ -14,8 +14,8 @@ function App() {
           <Route path="/" element={<Navigate to="/dashboard" replace />} />
           <Route path="/dashboard" element={<Dashboard />}>
             <Route index element={<CustomerList />} />
-            <Route path="/add" element={<AddCustomerForm />} />
-            <Route path="/:id/update" element={<UpdateCustomerForm />} />
+            <Route path="add" element={<AddCustomerForm />} />
+            <Route path=":id/update" element={<UpdateCustomerForm />} />
           </Route>
           <Route path="/login" element={<Login />} />
         </Routes>
