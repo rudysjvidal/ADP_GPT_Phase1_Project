@@ -13,7 +13,7 @@ const Login = () => {
 
     const handleLogin = () => {
         if (username == 'admin' && password == 'admin') {
-            setCookie('admin', true, { path: '/' });
+            setCookie('admin', true, { path: '/' , maxAge: 3600});
             navigate('/dashboard');
         } else {
             alert("Invalid username or password");

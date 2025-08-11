@@ -1,8 +1,10 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import { useCookies } from 'react-cookie'
 
 const NavigationBar = () => {
   const location = useLocation();
+  const [cookies, updateCookie] = useCookies(['admin']);
 
   return (
     <nav className="bg-slate-800 p-4 shadow-md sticky top-0 z-50">
@@ -12,23 +14,22 @@ const NavigationBar = () => {
         </div>
         <ul className="flex space-x-8">
           <li>
-          <Link 
-              to="/login" 
-              className={`px-4 py-2 rounded font-medium transition-all duration-300 ${
-                location.pathname === '/login' 
-                  ? 'text-blue-400 bg-slate-700' 
-                  : 'text-slate-300 hover:text-slate-100 hover:bg-slate-700'
-              }`}
+            <Link
+              to={cookies.admin ? "/dashboard" : "/login"}
+              className={`px-4 py-2 rounded font-medium transition-all duration-300 ${location.pathname === '/login'
+                ? 'text-blue-400 bg-slate-700'
+                : 'text-slate-300 hover:text-slate-100 hover:bg-slate-700'
+                }`}
+              onClick={() => { if (cookies.admin) { (updateCookie('admin', false)) } }}
             >
-              Login
+              {cookies.admin ? 'Logout' : 'Login'}
             </Link>
-            <Link 
-              to="/dashboard" 
-              className={`px-4 py-2 rounded font-medium transition-all duration-300 ${
-                location.pathname === '/dashboard' 
-                  ? 'text-blue-400 bg-slate-700' 
-                  : 'text-slate-300 hover:text-slate-100 hover:bg-slate-700'
-              }`}
+            <Link
+              to="/dashboard"
+              className={`px-4 py-2 rounded font-medium transition-all duration-300 ${location.pathname === '/dashboard'
+                ? 'text-blue-400 bg-slate-700'
+                : 'text-slate-300 hover:text-slate-100 hover:bg-slate-700'
+                }`}
             >
               Dashboard
             </Link>
