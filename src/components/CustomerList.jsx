@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import { useNavigate, useOutletContext } from 'react-router-dom';
-//import customersData from '../data/customers.json'
+import customersData from '/server/data.json'
 import CustomerInformation from './CustomerInformation'
+import CustomerSearch from './CustomerSearch';
 
 const CustomerList = () => {
   const { customers } = useOutletContext();
@@ -39,7 +40,7 @@ const CustomerList = () => {
         return prev.filter(c => c.id !== customer.id)
       } else {
         // Add customer if not selected and under limit
-        if (prev.length < 10) {
+        if (prev.length < 6) {
           return [...prev, customer]
         }
         return prev
@@ -63,7 +64,7 @@ const CustomerList = () => {
     <div className="flex min-h-96">
       <div className="w-3/10 border-r border-gray-300 p-5 flex flex-col">
       <div className="mb-4 flex flex-wrap items-center justify-between gap-x-3 gap-y-2">
-            <h3>Customer List</h3>
+            <h3>Customer Names:</h3>
             <button
               onClick={() => navigate('/dashboard/add')}
               className="px-3 py-1 bg-green-600 text-white rounded"
@@ -111,6 +112,7 @@ const CustomerList = () => {
       </div>
       
       <div className="w-7/10 p-5">
+        <CustomerSearch customers={customers} onSelectCustomer={handleCustomerClick}/>
         <CustomerInformation customers={selectedCustomers} onRemoveCustomer={handleRemoveCustomer} />
       </div>
     </div>

@@ -6,7 +6,10 @@
       "email": "alice.johnson@exale.com",
       "password": "pass123",
       "phone_number": "+1-555-0101",
-      "profile_picture": "https://randomuser.me/api/portraits/women/1.jpg"
+      "profile_picture": "https://randomuser.me/api/portraits/women/1.jpg",
+      "job_title": "Software Engineer",
+      "salary": 95000,
+      "benefits_selection": ["401k Account", "Health Insurance", "Dental Insurance"]
     },
     {
       "id": 2,
@@ -14,7 +17,10 @@
       "email": "bob.smith@example.com",
       "password": "secure456",
       "phone_number": "+1-555-0102",
-      "profile_picture": "https://randomuser.me/api/portraits/men/1.jpg"
+      "profile_picture": "https://upload.wikimedia.org/wikipedia/commons/a/ac/Default_pfp.jpg",
+      "job_title": "Marketing Manager",
+      "salary": 85000,
+      "benefits_selection": ["Health Insurance", "Vision Insurance"]
     },
     {
       "id": 3,
@@ -22,7 +28,10 @@
       "email": "charlie.brown@e.com",
       "password": "charlie789",
       "phone_number": "+1-555-0103",
-      "profile_picture": "https://randomuser.me/api/portraits/men/3.jpg"
+      "profile_picture": "https://randomuser.me/api/portraits/men/3.jpg",
+      "job_title": "Sales Associate",
+      "salary": 60000,
+      "benefits_selection": ["401k Account", "Dental Insurance"]
     },
     {
       "id": 4,
@@ -30,7 +39,10 @@
       "email": "diana.prince@example.com",
       "password": "wonderwoman",
       "phone_number": "+1-555-0104",
-      "profile_picture": "https://randomuser.me/api/portraits/women/4.jpg"
+      "profile_picture": "https://randomuser.me/api/portraits/women/4.jpg",
+      "job_title": "HR Specialist",
+      "salary": 72000,
+      "benefits_selection": ["Health Insurance", "Life Insurance", "Vision Insurance"]
     },
     {
       "id": 5,
@@ -38,7 +50,10 @@
       "email": "ethan.hunt@example.com",
       "password": "imfagent",
       "phone_number": "+1-555-0105",
-      "profile_picture": "https://randomuser.me/api/portraits/men/1.jpg"
+      "profile_picture": "https://upload.wikimedia.org/wikipedia/commons/a/ac/Default_pfp.jpg",
+      "job_title": "Operations Analyst",
+      "salary": 67000,
+      "benefits_selection": ["401k Account", "Long Term Disability Insurance"]
     },
     {
       "id": 6,
@@ -46,7 +61,10 @@
       "email": "fiona.gallagher@example.com",
       "password": "shameless",
       "phone_number": "+1-555-0106",
-      "profile_picture": "https://randomuser.me/api/portraits/women/6.jpg"
+      "profile_picture": "https://randomuser.me/api/portraits/women/6.jpg",
+      "job_title": "Accountant",
+      "salary": 78000,
+      "benefits_selection": ["Dental Insurance", "Vision Insurance"]
     },
     {
       "id": 7,
@@ -54,7 +72,10 @@
       "email": "george.michaels@example.com",
       "password": "faith1987",
       "phone_number": "+1-555-0107",
-      "profile_picture": "https://randomuser.me/api/portraits/men/1.jpg"
+      "profile_picture": "https://upload.wikimedia.org/wikipedia/commons/a/ac/Default_pfp.jpg",
+      "job_title": "Product Manager",
+      "salary": 105000,
+      "benefits_selection": ["401k Account", "Health Insurance", "Life Insurance"]
     },
     {
       "id": 8,
@@ -62,7 +83,10 @@
       "email": "hannah.baker@example.com",
       "password": "thirteen",
       "phone_number": "+1-555-0108",
-      "profile_picture": "https://randomuser.me/api/portraits/women/8.jpg"
+      "profile_picture": "https://randomuser.me/api/portraits/women/8.jpg",
+      "job_title": "Customer Support",
+      "salary": 52000,
+      "benefits_selection": ["Not Enrolled"]
     },
     {
       "id": 9,
@@ -70,7 +94,10 @@
       "email": "ian.malcolm@example.com",
       "password": "chaostheory",
       "phone_number": "+1-555-0109",
-      "profile_picture": "https://randomuser.me/api/portraits/men/1.jpg"
+      "profile_picture": "https://upload.wikimedia.org/wikipedia/commons/a/ac/Default_pfp.jpg",
+      "job_title": "QA Engineer",
+      "salary": 80000,
+      "benefits_selection": ["Health Insurance", "Dental Insurance", "Vision Insurance"]
     },
     {
       "id": 10,
@@ -78,7 +105,10 @@
       "email": "julia.roberts@example.com",
       "password": "prettywoman",
       "phone_number": "+1-555-0110",
-      "profile_picture": "https://randomuser.me/api/portraits/women/10.jpg"
+      "profile_picture": "https://randomuser.me/api/portraits/women/10.jpg",
+      "job_title": "Business Analyst",
+      "salary": 90000,
+      "benefits_selection": ["401k Account", "Health Insurance"]
     },
     {
       "id": 11,
@@ -86,7 +116,10 @@
       "email": "kevin.hart@example.com",
       "password": "comedyking",
       "phone_number": "+1-555-0111",
-      "profile_picture": "https://randomuser.me/api/portraits/men/1.jpg"
+      "profile_picture": "https://upload.wikimedia.org/wikipedia/commons/a/ac/Default_pfp.jpg",
+      "job_title": "Recruiter",
+      "salary": 69000,
+      "benefits_selection": ["Dental Insurance", "Vision Insurance"]
     },
     {
       "id": 12,
@@ -94,7 +127,10 @@
       "email": "laura.palmer@example.com",
       "password": "twinpeaks",
       "phone_number": "+1-555-0112",
-      "profile_picture": "https://randomuser.me/api/portraits/women/12.jpg"
+      "profile_picture": "https://randomuser.me/api/portraits/women/12.jpg",
+      "job_title": "Content Writer",
+      "salary": 55000,
+      "benefits_selection": ["Not Enrolled"]
     },
     {
       "id": 13,
@@ -102,7 +138,10 @@
       "email": "michael.scott@example.com",
       "password": "thatswhatshesaid",
       "phone_number": "+1-555-0113",
-      "profile_picture": "https://randomuser.me/api/portraits/men/1.jpg"
+      "profile_picture": "https://randomuser.me/api/portraits/men/19.jpg",
+      "job_title": "Branch Manager",
+      "salary": 72000,
+      "benefits_selection": ["401k Account", "Health Insurance", "Life Insurance"]
     },
     {
       "id": 14,
@@ -110,7 +149,10 @@
       "email": "nina.simone@example.com",
       "password": "feelinggood",
       "phone_number": "+1-555-0114",
-      "profile_picture": "https://randomuser.me/api/portraits/women/14.jpg"
+      "profile_picture": "https://randomuser.me/api/portraits/women/14.jpg",
+      "job_title": "Data Scientist",
+      "salary": 110000,
+      "benefits_selection": ["Health Insurance", "Vision Insurance"]
     },
     {
       "id": 15,
@@ -118,7 +160,10 @@
       "email": "oscar.isaac@example.com",
       "password": "moonknight",
       "phone_number": "+1-555-0115",
-      "profile_picture": "https://randomuser.me/api/portraits/men/1.jpg"
+      "profile_picture": "https://upload.wikimedia.org/wikipedia/commons/a/ac/Default_pfp.jpg",
+      "job_title": "Web Developer",
+      "salary": 95000,
+      "benefits_selection": ["401k Account", "Dental Insurance"]
     },
     {
       "id": 16,
@@ -126,7 +171,10 @@
       "email": "pam.beesly@example.com",
       "password": "officeart",
       "phone_number": "+1-555-0116",
-      "profile_picture": "https://randomuser.me/api/portraits/women/16.jpg"
+      "profile_picture": "https://randomuser.me/api/portraits/women/16.jpg",
+      "job_title": "Office Manager",
+      "salary": 62000,
+      "benefits_selection": ["Not Enrolled"]
     },
     {
       "id": 17,
@@ -134,7 +182,10 @@
       "email": "quentin.blake@example.com",
       "password": "illustrator",
       "phone_number": "+1-555-0117",
-      "profile_picture": "https://randomuser.me/api/portraits/men/1.jpg"
+      "profile_picture": "https://randomuser.me/api/portraits/men/1.jpg",
+      "job_title": "Graphic Designer",
+      "salary": 70000,
+      "benefits_selection": ["Health Insurance", "Vision Insurance"]
     },
     {
       "id": 18,
@@ -142,7 +193,10 @@
       "email": "rachel.green@example.com",
       "password": "centralperk",
       "phone_number": "+1-555-0118",
-      "profile_picture": "https://randomuser.me/api/portraits/women/18.jpg"
+      "profile_picture": "https://randomuser.me/api/portraits/women/18.jpg",
+      "job_title": "Fashion Designer",
+      "salary": 85000,
+      "benefits_selection": ["401k Account", "Dental Insurance"]
     },
     {
       "id": 19,
@@ -150,7 +204,10 @@
       "email": "sam.wilson@example.com",
       "password": "falcon",
       "phone_number": "+1-555-0119",
-      "profile_picture": "https://randomuser.me/api/portraits/men/1.jpg"
+      "profile_picture": "https://randomuser.me/api/portraits/men/1.jpg",
+      "job_title": "Pilot",
+      "salary": 120000,
+      "benefits_selection": ["Health Insurance", "Life Insurance", "Vision Insurance"]
     },
     {
       "id": 20,
@@ -158,7 +215,10 @@
       "email": "tina.fey@example.com",
       "password": "30rock",
       "phone_number": "+1-555-0120",
-      "profile_picture": "https://randomuser.me/api/portraits/women/20.jpg"
+      "profile_picture": "https://randomuser.me/api/portraits/women/20.jpg",
+      "job_title": "Comedian",
+      "salary": 95000,
+      "benefits_selection": ["401k Account", "Dental Insurance"]
     },
     {
       "id": 21,
@@ -166,7 +226,10 @@
       "email": "david.miller@example.com",
       "password": "miller123",
       "phone_number": "+1-555-0121",
-      "profile_picture": "https://randomuser.me/api/portraits/men/21.jpg"
+      "profile_picture": "https://randomuser.me/api/portraits/men/21.jpg",
+      "job_title": "Software Architect",
+      "salary": 105000,
+      "benefits_selection": ["Health Insurance", "Vision Insurance"]
     },
     {
       "id": 22,
@@ -174,7 +237,10 @@
       "email": "sarah.connor@example.com",
       "password": "terminator",
       "phone_number": "+1-555-0122",
-      "profile_picture": "https://randomuser.me/api/portraits/women/22.jpg"
+      "profile_picture": "https://randomuser.me/api/portraits/women/22.jpg",
+      "job_title": "Cybersecurity Analyst",
+      "salary": 98000,
+      "benefits_selection": ["401k Account", "Dental Insurance"]
     },
     {
       "id": 23,
@@ -182,7 +248,10 @@
       "email": "james.bond@example.com",
       "password": "agent007",
       "phone_number": "+1-555-0123",
-      "profile_picture": "https://randomuser.me/api/portraits/men/23.jpg"
+      "profile_picture": "https://randomuser.me/api/portraits/men/23.jpg",
+      "job_title": "Spy",
+      "salary": 150000,
+      "benefits_selection": ["Health Insurance", "Life Insurance", "Vision Insurance"]
     },
     {
       "id": 24,
@@ -190,7 +259,10 @@
       "email": "emma.watson@example.com",
       "password": "hermione",
       "phone_number": "+1-555-0124",
-      "profile_picture": "https://randomuser.me/api/portraits/women/24.jpg"
+      "profile_picture": "https://randomuser.me/api/portraits/women/24.jpg",
+      "job_title": "Actress",
+      "salary": 130000,
+      "benefits_selection": ["401k Account", "Dental Insurance"]
     },
     {
       "id": 25,
@@ -198,7 +270,10 @@
       "email": "tony.stark@example.com",
       "password": "ironman",
       "phone_number": "+1-555-0125",
-      "profile_picture": "https://randomuser.me/api/portraits/men/25.jpg"
+      "profile_picture": "https://randomuser.me/api/portraits/men/25.jpg",
+      "job_title": "Industrial Designer",
+      "salary": 90000,
+      "benefits_selection": ["Health Insurance", "Vision Insurance"]
     },
     {
       "id": 26,
@@ -206,7 +281,10 @@
       "email": "natasha.romanoff@example.com",
       "password": "blackwidow",
       "phone_number": "+1-555-0126",
-      "profile_picture": "https://randomuser.me/api/portraits/women/26.jpg"
+      "profile_picture": "https://randomuser.me/api/portraits/women/26.jpg",
+      "job_title": "Intelligence Analyst",
+      "salary": 85000,
+      "benefits_selection": ["401k Account", "Dental Insurance"]
     },
     {
       "id": 27,
@@ -214,7 +292,10 @@
       "email": "bruce.wayne@example.com",
       "password": "batman",
       "phone_number": "+1-555-0127",
-      "profile_picture": "https://randomuser.me/api/portraits/men/27.jpg"
+      "profile_picture": "https://randomuser.me/api/portraits/men/27.jpg",
+      "job_title": "Venture Capitalist",
+      "salary": 250000,
+      "benefits_selection": ["Health Insurance", "Life Insurance", "Vision Insurance"]
     },
     {
       "id": 28,
@@ -222,7 +303,10 @@
       "email": "wonder.woman@example.com",
       "password": "amazonian",
       "phone_number": "+1-555-0128",
-      "profile_picture": "https://randomuser.me/api/portraits/women/28.jpg"
+      "profile_picture": "https://randomuser.me/api/portraits/women/28.jpg",
+      "job_title": "Ambassador",
+      "salary": 90000,
+      "benefits_selection": ["401k Account", "Dental Insurance"]
     },
     {
       "id": 29,
@@ -230,7 +314,10 @@
       "email": "peter.parker@example.com",
       "password": "spiderman",
       "phone_number": "+1-555-0129",
-      "profile_picture": "https://randomuser.me/api/portraits/men/29.jpg"
+      "profile_picture": "https://randomuser.me/api/portraits/men/29.jpg",
+      "job_title": "Photographer",
+      "salary": 70000,
+      "benefits_selection": ["Health Insurance", "Vision Insurance"]
     },
     {
       "id": 30,
@@ -238,7 +325,10 @@
       "email": "leia.organa@example.com",
       "password": "princess",
       "phone_number": "+1-555-0130",
-      "profile_picture": "https://randomuser.me/api/portraits/women/30.jpg"
+      "profile_picture": "https://randomuser.me/api/portraits/women/30.jpg",
+      "job_title": "Senator",
+      "salary": 100000,
+      "benefits_selection": ["401k Account", "Dental Insurance"]
     },
     {
       "id": 31,
@@ -246,7 +336,10 @@
       "email": "luke.skywalker@example.com",
       "password": "jedi",
       "phone_number": "+1-555-0131",
-      "profile_picture": "https://randomuser.me/api/portraits/men/31.jpg"
+      "profile_picture": "https://randomuser.me/api/portraits/men/31.jpg",
+      "job_title": "Jedi Master",
+      "salary": 120000,
+      "benefits_selection": ["Health Insurance", "Life Insurance", "Vision Insurance"]
     },
     {
       "id": 32,
@@ -254,7 +347,10 @@
       "email": "rey.palpatine@example.com",
       "password": "lastjedi",
       "phone_number": "+1-555-0132",
-      "profile_picture": "https://randomuser.me/api/portraits/women/32.jpg"
+      "profile_picture": "https://randomuser.me/api/portraits/women/32.jpg",
+      "job_title": "Sith Lord",
+      "salary": 130000,
+      "benefits_selection": ["401k Account", "Dental Insurance"]
     },
     {
       "id": 33,
@@ -262,7 +358,10 @@
       "email": "john.wick@example.com",
       "password": "pencil",
       "phone_number": "+1-555-0133",
-      "profile_picture": "https://randomuser.me/api/portraits/men/33.jpg"
+      "profile_picture": "https://randomuser.me/api/portraits/men/33.jpg",
+      "job_title": "Hitman",
+      "salary": 200000,
+      "benefits_selection": ["Health Insurance", "Life Insurance", "Vision Insurance"]
     },
     {
       "id": 34,
@@ -270,7 +369,10 @@
       "email": "hermione.granger@example.com",
       "password": "brightest",
       "phone_number": "+1-555-0134",
-      "profile_picture": "https://randomuser.me/api/portraits/women/34.jpg"
+      "profile_picture": "https://randomuser.me/api/portraits/women/34.jpg",
+      "job_title": "Potions Master",
+      "salary": 95000,
+      "benefits_selection": ["401k Account", "Dental Insurance"]
     },
     {
       "id": 35,
@@ -278,7 +380,10 @@
       "email": "harry.potter@example.com",
       "password": "chosen1",
       "phone_number": "+1-555-0135",
-      "profile_picture": "https://randomuser.me/api/portraits/men/35.jpg"
+      "profile_picture": "https://randomuser.me/api/portraits/men/35.jpg",
+      "job_title": "Defense Against the Dark Arts Teacher",
+      "salary": 85000,
+      "benefits_selection": ["Health Insurance", "Vision Insurance"]
     },
     {
       "id": 36,
@@ -286,7 +391,10 @@
       "email": "katniss.everdeen@example.com",
       "password": "mockingjay",
       "phone_number": "+1-555-0136",
-      "profile_picture": "https://randomuser.me/api/portraits/women/36.jpg"
+      "profile_picture": "https://randomuser.me/api/portraits/women/36.jpg",
+      "job_title": "Survival Instructor",
+      "salary": 60000,
+      "benefits_selection": ["401k Account", "Dental Insurance"]
     },
     {
       "id": 37,
@@ -294,7 +402,10 @@
       "email": "peeta.mellark@example.com",
       "password": "baker",
       "phone_number": "+1-555-0137",
-      "profile_picture": "https://randomuser.me/api/portraits/men/37.jpg"
+      "profile_picture": "https://randomuser.me/api/portraits/men/37.jpg",
+      "job_title": "Master Baker",
+      "salary": 55000,
+      "benefits_selection": ["Health Insurance", "Vision Insurance"]
     },
     {
       "id": 38,
@@ -302,7 +413,10 @@
       "email": "arya.stark@example.com",
       "password": "faceless",
       "phone_number": "+1-555-0138",
-      "profile_picture": "https://randomuser.me/api/portraits/women/38.jpg"
+      "profile_picture": "https://randomuser.me/api/portraits/women/38.jpg",
+      "job_title": "Assassin",
+      "salary": 95000,
+      "benefits_selection": ["401k Account", "Dental Insurance"]
     },
     {
       "id": 39,
@@ -310,7 +424,10 @@
       "email": "jon.snow@example.com",
       "password": "knowsnothing",
       "phone_number": "+1-555-0139",
-      "profile_picture": "https://randomuser.me/api/portraits/men/39.jpg"
+      "profile_picture": "https://randomuser.me/api/portraits/men/39.jpg",
+      "job_title": "Lord Commander",
+      "salary": 90000,
+      "benefits_selection": ["Health Insurance", "Life Insurance", "Vision Insurance"]
     },
     {
       "id": 40,
@@ -318,7 +435,10 @@
       "email": "daenerys.targaryen@example.com",
       "password": "dragonqueen",
       "phone_number": "+1-555-0140",
-      "profile_picture": "https://randomuser.me/api/portraits/women/40.jpg"
+      "profile_picture": "https://randomuser.me/api/portraits/women/40.jpg",
+      "job_title": "Queen",
+      "salary": 250000,
+      "benefits_selection": ["401k Account", "Dental Insurance"]
     }
   ]
 }
