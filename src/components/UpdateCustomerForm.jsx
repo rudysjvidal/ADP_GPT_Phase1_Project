@@ -51,26 +51,27 @@ export default function UpdateCustomerForm() {
     return Object.keys(e).length === 0;
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     if (!validate() || !current) return;
 
-    updateCustomer({
+    const payload = {
       ...current,
       name: values.name.trim(),
       email: values.email.trim(),
       password: values.password,
       phone_number: values.phone_number,
-      profile_picture: values.profile_picture.trim(),
-    });
+      profile_picture: (values.profile_picture || '').trim(),
+    };
 
+    await updateCustomer(payload);
     navigate("/dashboard");
   };
 
-  const handleDelete = () => {
+  const handleDelete = async () => {
     if (!current) return;
     if (confirm(`Delete ${current.name}?`)) {
-      deleteCustomer(current.id);
+      await deleteCustomer(current.id);
       navigate("/dashboard");
     }
   };
