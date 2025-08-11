@@ -9,7 +9,9 @@
     "build": "vite build",
     "preview": "vite preview",
     "serve": "vite preview",
-    "start": "npm run build && node server.js"
+    "clean": "rm -rf node_modules package-lock.json",
+    "fresh-install": "npm run clean && npm install",
+    "start": "npm run fresh-install && npm run build && node server.js"
   },
   "repository": {
     "type": "git",
