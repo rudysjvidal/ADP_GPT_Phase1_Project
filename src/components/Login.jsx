@@ -6,17 +6,17 @@ import './Login.css'
 import { useCookies } from 'react-cookie'
 
 const Login = () => {
-    const [username, setUsername] = useState("");
-    const [password, setPassword] = useState("");
+    const [username, setUsername] = useState('');
+    const [password, setPassword] = useState('');
     const [cookies, setCookie] = useCookies(['admin']);
     const navigate = useNavigate();
 
     const handleLogin = () => {
         if (username == 'admin' && password == 'admin') {
-            setCookie('admin', true, { path: '/' , maxAge: 3600});
+            setCookie('admin', true, { path: '/' , maxAge: 3600, httpOnly: true });
             navigate('/dashboard');
         } else {
-            alert("Invalid username or password");
+            alert('Invalid username or password');
         }
     }
 
@@ -29,6 +29,7 @@ const Login = () => {
                     placeholder={'username'}
                     onChange={(e) => setUsername(e.target.value)}
                     className={'login-input'}
+                    autoComplete='off'
                 />
                 <div />
                 <input type={'text'}
@@ -36,6 +37,7 @@ const Login = () => {
                     placeholder={'password'}
                     onChange={(e) => setPassword(e.target.value)}
                     className={'login-input'}
+                    autoComplete='off'
                 />
                 <br />
 
