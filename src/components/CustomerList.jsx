@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react'
 import { useNavigate, useOutletContext } from 'react-router-dom';
-import customersData from '/server/data.json'
 import CustomerInformation from './CustomerInformation'
 import CustomerSearch from './CustomerSearch';
 
@@ -8,9 +7,30 @@ const CustomerList = () => {
   const { customers } = useOutletContext();
   const navigate = useNavigate();
 
-  const [selectedCustomers, setSelectedCustomers] = useState([])
-  const [currentPage, setCurrentPage] = useState(0)
-  const [customersPerPage, setCustomersPerPage] = useState(10)
+  const [selectedCustomers, setSelectedCustomers] = useState([]);
+  const [currentPage, setCurrentPage] = useState(0);
+  const [customersPerPage, setCustomersPerPage] = useState(10);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    const fetchCustomers = async () => {
+      try {
+        const response = await fetch('/customers');
+        if (!response.ok) {
+          throw new Error('Failed to fetch customers');
+        }
+        const data = await response.json();
+        setCustomers(data);
+        setLoading(false);
+      } catch (err) {
+        setError(err.message);
+        setLoading(false);
+      }
+    };
+
+    fetchCustomers();
+  }, []);
 
   useEffect(() => {
     const updateCustomersPerPage = () => {
@@ -25,6 +45,14 @@ const CustomerList = () => {
     
     return () => window.removeEventListener('resize', updateCustomersPerPage)
   }, [])
+
+  if (loading) {
+    return <div>Loading customers...</div>
+  }
+
+  if (error) {
+    return <div>Error: { error }</div>
+  }
 
   const startIndex = currentPage * customersPerPage
   const endIndex = startIndex + customersPerPage
