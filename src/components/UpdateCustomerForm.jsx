@@ -18,27 +18,46 @@ export default function UpdateCustomerForm() {
     password: "",
     phone_number: "",
     profile_picture: "",
+    job_title: "",
+    salary: 0,
   });
+  const [benefitsInput, setBenefitsInput] = useState("");  
   const [errors, setErrors] = useState({});
 
   // prefill form when we find the record
   useEffect(() => {
     if (current) {
-      const { name, email, password, phone_number, profile_picture } = current;
+      const {
+        name, email, password, phone_number,
+        profile_picture, job_title, salary,
+        benefits_selection
+      } = current;
       setValues({
         name: name ?? "",
         email: email ?? "",
         password: password ?? "",
         phone_number: phone_number ?? "",
         profile_picture: profile_picture ?? "",
+        job_title: job_title ?? "",
+        salary: salary ?? 0,
       });
+      setBenefitsInput((benefits_selection || []).join(", "));
     }
   }, [current]);
+  
 
   const onChange = (e) => {
     const { name, value } = e.target;
-    setValues(v => ({ ...v, [name]: value }));
+  
+    if (name === "benefits_selection") {
+      setBenefitsInput(value);
+    } else if (name === "salary") {
+      setValues(v => ({ ...v, salary: Number(value) }));
+    } else {
+      setValues(v => ({ ...v, [name]: value }));
+    }
   };
+  
 
   const validate = () => {
     const e = {};
@@ -62,7 +81,11 @@ export default function UpdateCustomerForm() {
       password: values.password,
       phone_number: values.phone_number,
       profile_picture: (values.profile_picture || '').trim(),
+      job_title: values.job_title,
+      salary: values.salary,
+      benefits_selection: benefitsInput.split(",").map(s => s.trim()).filter(Boolean),
     };
+    
 
     await updateCustomer(payload);
     navigate("/dashboard");
@@ -112,6 +135,24 @@ export default function UpdateCustomerForm() {
           <span>Profile Picture URL</span>
           <input name="profile_picture" value={values.profile_picture} onChange={onChange} className="border p-2 rounded" />
           {errors.profile_picture && <small className="text-red-600">{errors.profile_picture}</small>}
+        </label>
+        <label className="grid gap-1">
+          <span>Job Title</span>
+          <input name="job_title" value={values.job_title} onChange={onChange} className="border p-2 rounded" />
+        </label>
+        
+        <label className="grid gap-1">
+          <span>Salary</span>
+          <input name="salary" type="number" value={values.salary} onChange={onChange} className="border p-2 rounded" />
+        </label>
+        <label className="grid gap-1">
+          <span>Benefits Selection (comma separated)</span>
+          <input
+            name="benefits_selection"
+            value={benefitsInput}
+            onChange={onChange}
+            className="border p-2 rounded"
+          />
         </label>
 
         <div className="flex gap-2 mt-2">
