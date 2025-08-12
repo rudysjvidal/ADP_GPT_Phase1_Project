@@ -11,12 +11,24 @@ export default function AddCustomerForm() {
     password: "",
     phone_number: "",
     profile_picture: "",
+    job_title: "",
+    salary: "",
+    benefits_selection: [],
   });
   const [errors, setErrors] = useState({});
 
+  const [benefitsInput, setBenefitsInput] = useState("");
+
   const onChange = (e) => {
     const { name, value } = e.target;
-    setValues(v => ({ ...v, [name]: value }));
+  
+    if (name === "benefits_selection") {
+      setBenefitsInput(value);
+    } else if (name === "salary") {
+      setValues((v) => ({ ...v, [name]: Number(value) }));
+    } else {
+      setValues((v) => ({ ...v, [name]: value }));
+    }
   };
 
   // Light validation
@@ -27,6 +39,7 @@ export default function AddCustomerForm() {
     if (values.email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(values.email)) e.email = "Invalid email.";
     if (!values.password.trim()) e.password = "Password is required.";
     if (values.profile_picture && !/^https?:\/\//i.test(values.profile_picture)) e.profile_picture = "Must be a URL.";
+    if (values.salary !== "" && (isNaN(values.salary) || values.salary < 0)) e.salary = "Salary must be a positive number.";
     setErrors(e);
     return Object.keys(e).length === 0;
   };
@@ -41,6 +54,9 @@ export default function AddCustomerForm() {
       password: values.password,
       phone_number: values.phone_number,
       profile_picture: (values.profile_picture || '').trim(),
+      job_title: values.job_title.trim(),
+      salary: values.salary,
+      benefits_selection: benefitsInput.split(",").map(s => s.trim()).filter(Boolean),
     };
 
     await addCustomer(payload);
@@ -79,6 +95,28 @@ export default function AddCustomerForm() {
           <input name="profile_picture" value={values.profile_picture} onChange={onChange} className="border p-2 rounded" />
           {errors.profile_picture && <small className="text-red-600">{errors.profile_picture}</small>}
         </label>
+
+        <label className="grid gap-1">
+          <span>Job Title</span>
+          <input name="job_title" value={values.job_title} onChange={onChange} className="border p-2 rounded" />
+        </label>
+
+        <label className="grid gap-1">
+          <span>Salary</span>
+          <input name="salary" type="number" value={values.salary} onChange={onChange} className="border p-2 rounded" />
+          {errors.salary && <small className="text-red-600">{errors.salary}</small>}
+        </label>
+        
+        <label className="grid gap-1">
+          <span>Benefits Selection (comma separated)</span>
+          <input
+            name="benefits_selection"
+            value={benefitsInput}
+            onChange={onChange}
+            className="border p-2 rounded"
+          />
+        </label>
+
 
         <div className="flex gap-2 mt-2">
           <button type="submit" className="px-3 py-2 bg-green-600 text-white rounded">Add</button>
