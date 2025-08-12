@@ -10,27 +10,27 @@ const CustomerList = () => {
   const [selectedCustomers, setSelectedCustomers] = useState([]);
   const [currentPage, setCurrentPage] = useState(0);
   const [customersPerPage, setCustomersPerPage] = useState(10);
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
 
-  useEffect(() => {
-    const fetchCustomers = async () => {
-      try {
-        const response = await fetch('/customers');
-        if (!response.ok) {
-          throw new Error('Failed to fetch customers');
-        }
-        const data = await response.json();
-        setCustomers(data);
-        setLoading(false);
-      } catch (err) {
-        setError(err.message);
-        setLoading(false);
-      }
-    };
+  // useEffect(() => {
+  //   const fetchCustomers = async () => {
+  //     try {
+  //       const response = await fetch('/customers');
+  //       if (!response.ok) {
+  //         throw new Error('Failed to fetch customers');
+  //       }
+  //       const data = await response.json();
+  //       setCustomers(data);
+  //       setLoading(false);
+  //     } catch (err) {
+  //       setError(err.message);
+  //       setLoading(false);
+  //     }
+  //   };
 
-    fetchCustomers();
-  }, []);
+  //   fetchCustomers();
+  // }, []);
 
   useEffect(() => {
     const updateCustomersPerPage = () => {
@@ -46,13 +46,13 @@ const CustomerList = () => {
     return () => window.removeEventListener('resize', updateCustomersPerPage)
   }, [])
 
-  if (loading) {
-    return <div>Loading customers...</div>
-  }
+  // if (loading) {
+  //   return <div>Loading customers...</div>
+  // }
 
-  if (error) {
-    return <div>Error: { error }</div>
-  }
+  // if (error) {
+  //   return <div>Error: { error }</div>
+  // }
 
   const startIndex = currentPage * customersPerPage
   const endIndex = startIndex + customersPerPage
