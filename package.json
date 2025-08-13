@@ -11,7 +11,7 @@
     "serve": "vite preview",
     "clean": "rm -rf node_modules package-lock.json",
     "fresh-install": "npm run clean && npm install",
-    "start": "npm run fresh-install && npm run build"
+    "start": "npm run dev"
   },
   "repository": {
     "type": "git",
