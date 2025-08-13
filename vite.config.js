@@ -8,8 +8,10 @@ export default defineConfig({
     open: true
   },
   preview: {
+    host: '0.0.0.0',
+    port: process.env.PORT || 4173,
     allowedHosts: [
-      "https://adp-customer-dashboard-react-project.onrender.com/",
+      "adp-customer-dashboard-react-project.onrender.com",
     ],
   },
 });
