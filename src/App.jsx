@@ -5,13 +5,13 @@ import CustomerList from './components/CustomerList';
 import AddCustomerForm from './components/AddCustomerForm';
 import Login from './components/Login';
 import UpdateCustomerForm from './components/UpdateCustomerForm';
-import {CookiesProvider} from 'react-cookie';
+// import {CookiesProvider} from 'react-cookie';
 import AuthorizeAccess from './components/AuthorizeAccess';
 import OrgChart from './components/OrgChart';
 
 function App() {
   return (
-    <CookiesProvider>
+    // <CookiesProvider>
     <Router>
       <div className="App">
         <Routes>
@@ -34,7 +34,7 @@ function App() {
         </Routes>
       </div>
     </Router>
-    </CookiesProvider>
+    // </CookiesProvider>
   );
 }
 

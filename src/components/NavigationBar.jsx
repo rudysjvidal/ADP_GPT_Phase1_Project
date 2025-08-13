@@ -4,7 +4,16 @@ import { useCookies } from 'react-cookie'
 
 const NavigationBar = () => {
   const location = useLocation();
-  const [cookies, updateCookie] = useCookies(['admin']);
+  //const [cookies, updateCookie] = useCookies(['admin']);
+
+  const isAdmin = sessionStorage.getItem('isAdmin') === 'true';
+
+  const handleLogout = () => {
+    sessionStorage.removeItem('isAdmin');
+    sessionStorage.removeItem('user');
+    alert('User logged out successfully');
+  }
+
 
   return (
     <nav className="bg-slate-800 p-4 shadow-md sticky top-0 z-50">
@@ -15,14 +24,14 @@ const NavigationBar = () => {
         <ul className="flex space-x-8">
           <li>
             <Link
-              to={cookies.admin ? "/dashboard" : "/login"}
+              to={isAdmin ? "/dashboard" : "/login"}
               className={`px-4 py-2 rounded font-medium transition-all duration-300 ${location.pathname === '/login'
                 ? 'text-blue-400 bg-slate-700'
                 : 'text-slate-300 hover:text-slate-100 hover:bg-slate-700'
                 }`}
-              onClick={() => { if (cookies.admin) { (updateCookie('admin', false)) } }}
+              onClick={() => { if (isAdmin) {handleLogout()} }}
             >
-              {cookies.admin ? 'Logout' : 'Login'}
+              {isAdmin ? 'Logout' : 'Login'}
             </Link>
             <Link
               to="/dashboard"

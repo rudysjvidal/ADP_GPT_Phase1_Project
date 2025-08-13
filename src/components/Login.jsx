@@ -3,16 +3,14 @@ import { useState, useEffect } from 'react'
 import NavigationBar from './NavigationBar'
 import { useNavigate } from 'react-router-dom'
 import './Login.css'
-import { useCookies } from 'react-cookie'
+// import { useCookies } from 'react-cookie'
 import * as usersApi from '../api/users';
 
 const Login = () => {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
-    const [cookies, setCookie] = useCookies(['admin']);
+    //const [cookies, setCookie] = useCookies(['admin']);
     const [users, setUsers] = useState([]);
-    
-    
     const navigate = useNavigate();
 
     useEffect(() => {
@@ -21,10 +19,12 @@ const Login = () => {
 
     const handleLogin = () => {
         const user = users.find((u)=> username === u.user && password === u.password )
-        console.log(users[0].user, users[0].password)
+        //console.log(users[0].user, users[0].password)
         console.log(username, password) 
         if (user) {
-            setCookie(`admin`, true, { path: '/', maxAge: 3600, httpOnly: false });
+            sessionStorage.setItem('isAdmin', 'true');
+            console.log('User logged in successfully');
+            // setCookie(`admin`, true, { path: '/', maxAge: 3600, httpOnly: false });
             navigate('/dashboard');
         } else {
             alert('Invalid username or password');
