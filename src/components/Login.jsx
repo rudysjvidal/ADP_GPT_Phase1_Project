@@ -24,7 +24,7 @@ const Login = () => {
         console.log(users[0].user, users[0].password)
         console.log(username, password) 
         if (user) {
-            setCookie(`${username}`, true, { path: '/', maxAge: 3600, httpOnly: false });
+            setCookie(`admin`, true, { path: '/', maxAge: 3600, httpOnly: false });
             navigate('/dashboard');
         } else {
             alert('Invalid username or password');
