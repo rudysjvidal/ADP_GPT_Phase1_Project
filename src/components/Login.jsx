@@ -1,19 +1,30 @@
 import React from 'react'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import NavigationBar from './NavigationBar'
 import { useNavigate } from 'react-router-dom'
 import './Login.css'
 import { useCookies } from 'react-cookie'
+import * as usersApi from '../api/users';
 
 const Login = () => {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
     const [cookies, setCookie] = useCookies(['admin']);
+    const [users, setUsers] = useState([]);
+    
+    
     const navigate = useNavigate();
 
+    useEffect(() => {
+        usersApi.getAll().then(setUsers);
+    }, []);
+
     const handleLogin = () => {
-        if (username == 'admin' && password == 'admin') {
-            setCookie('admin', true, { path: '/' , maxAge: 3600, httpOnly: true });
+        const user = users.find((u)=> username === u.user && password === u.password )
+        console.log(users[0].user, users[0].password)
+        console.log(username, password) 
+        if (user) {
+            setCookie(`admin`, true, { path: '/', maxAge: 3600, httpOnly: false });
             navigate('/dashboard');
         } else {
             alert('Invalid username or password');
@@ -24,6 +35,7 @@ const Login = () => {
         <>
             <NavigationBar />
             <div className={'login-container'}>
+                <h1 className={'login-header'}>Login</h1>
                 <input type={'text'}
                     name={'username'}
                     placeholder={'username'}
@@ -41,10 +53,7 @@ const Login = () => {
                 />
                 <br />
 
-                <button onClick={handleLogin} className={`px-4 py-2 rounded font-medium transition-all duration-300 ${location.pathname === '/login'
-                        ? 'text-blue-400 bg-slate-700'
-                        : 'text-slate-300 hover:text-slate-100 hover:bg-slate-700'
-                    }`}>Login</button>
+                <button onClick={handleLogin} className={'login-button'}>Login</button>
             </div>
         </>
     )

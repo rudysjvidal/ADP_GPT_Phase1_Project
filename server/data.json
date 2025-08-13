@@ -7,9 +7,11 @@
       "password": "pass123",
       "phone_number": "+1-555-0101",
       "profile_picture": "https://randomuser.me/api/portraits/women/1.jpg",
-      "job_title": "Software Engineer",
+      "job_title": "Junior Software Engineer",
       "salary": 95000,
-      "benefits_selection": ["401k Account", "Health Insurance", "Dental Insurance"]
+      "benefits_selection": ["401k Account", "Health Insurance", "Dental Insurance"],
+      "managerId": 21,
+      "level": 6
     },
     {
       "id": 2,
@@ -18,9 +20,11 @@
       "password": "secure456",
       "phone_number": "+1-555-0102",
       "profile_picture": "https://upload.wikimedia.org/wikipedia/commons/a/ac/Default_pfp.jpg",
-      "job_title": "Marketing Manager",
+      "job_title": "Marketing Director",
       "salary": 85000,
-      "benefits_selection": ["Health Insurance", "Vision Insurance"]
+      "benefits_selection": ["Health Insurance", "Vision Insurance"],
+      "managerId": 3,
+      "level": 3
     },
     {
       "id": 3,
@@ -29,9 +33,11 @@
       "password": "charlie789",
       "phone_number": "+1-555-0103",
       "profile_picture": "https://randomuser.me/api/portraits/men/3.jpg",
-      "job_title": "Sales Associate",
-      "salary": 60000,
-      "benefits_selection": ["401k Account", "Dental Insurance"]
+      "job_title": "Chief Executive Officer",
+      "salary": 350000,
+      "benefits_selection": ["401k Account", "Health Insurance", "Dental Insurance", "Executive Package"],
+      "managerId": null,
+      "level": 1
     },
     {
       "id": 4,
@@ -40,9 +46,11 @@
       "password": "wonderwoman",
       "phone_number": "+1-555-0104",
       "profile_picture": "https://randomuser.me/api/portraits/women/4.jpg",
-      "job_title": "HR Specialist",
+      "job_title": "HR Manager",
       "salary": 72000,
-      "benefits_selection": ["Health Insurance", "Life Insurance", "Vision Insurance"]
+      "benefits_selection": ["Health Insurance", "Life Insurance", "Vision Insurance"],
+      "managerId": 27,
+      "level": 4
     },
     {
       "id": 5,
@@ -53,7 +61,9 @@
       "profile_picture": "https://upload.wikimedia.org/wikipedia/commons/a/ac/Default_pfp.jpg",
       "job_title": "Operations Analyst",
       "salary": 67000,
-      "benefits_selection": ["401k Account", "Long Term Disability Insurance"]
+      "benefits_selection": ["401k Account", "Long Term Disability Insurance"],
+      "managerId": 13,
+      "level": 5
     },
     {
       "id": 6,
@@ -62,9 +72,11 @@
       "password": "shameless",
       "phone_number": "+1-555-0106",
       "profile_picture": "https://randomuser.me/api/portraits/women/6.jpg",
-      "job_title": "Accountant",
+      "job_title": "Senior Accountant",
       "salary": 78000,
-      "benefits_selection": ["Dental Insurance", "Vision Insurance"]
+      "benefits_selection": ["Dental Insurance", "Vision Insurance"],
+      "managerId": 10,
+      "level": 5
     },
     {
       "id": 7,
@@ -73,9 +85,11 @@
       "password": "faith1987",
       "phone_number": "+1-555-0107",
       "profile_picture": "https://upload.wikimedia.org/wikipedia/commons/a/ac/Default_pfp.jpg",
-      "job_title": "Product Manager",
-      "salary": 105000,
-      "benefits_selection": ["401k Account", "Health Insurance", "Life Insurance"]
+      "job_title": "VP of Product",
+      "salary": 185000,
+      "benefits_selection": ["401k Account", "Health Insurance", "Life Insurance"],
+      "managerId": 3,
+      "level": 2
     },
     {
       "id": 8,
@@ -84,9 +98,11 @@
       "password": "thirteen",
       "phone_number": "+1-555-0108",
       "profile_picture": "https://randomuser.me/api/portraits/women/8.jpg",
-      "job_title": "Customer Support",
+      "job_title": "Customer Support Representative",
       "salary": 52000,
-      "benefits_selection": ["Not Enrolled"]
+      "benefits_selection": ["Not Enrolled"],
+      "managerId": 11,
+      "level": 7
     },
     {
       "id": 9,
@@ -95,9 +111,11 @@
       "password": "chaostheory",
       "phone_number": "+1-555-0109",
       "profile_picture": "https://upload.wikimedia.org/wikipedia/commons/a/ac/Default_pfp.jpg",
-      "job_title": "QA Engineer",
+      "job_title": "Senior QA Engineer",
       "salary": 80000,
-      "benefits_selection": ["Health Insurance", "Dental Insurance", "Vision Insurance"]
+      "benefits_selection": ["Health Insurance", "Dental Insurance", "Vision Insurance"],
+      "managerId": 21,
+      "level": 6
     },
     {
       "id": 10,
@@ -106,9 +124,11 @@
       "password": "prettywoman",
       "phone_number": "+1-555-0110",
       "profile_picture": "https://randomuser.me/api/portraits/women/10.jpg",
-      "job_title": "Business Analyst",
+      "job_title": "Finance Manager",
       "salary": 90000,
-      "benefits_selection": ["401k Account", "Health Insurance"]
+      "benefits_selection": ["401k Account", "Health Insurance"],
+      "managerId": 27,
+      "level": 4
     },
     {
       "id": 11,
@@ -117,9 +137,11 @@
       "password": "comedyking",
       "phone_number": "+1-555-0111",
       "profile_picture": "https://upload.wikimedia.org/wikipedia/commons/a/ac/Default_pfp.jpg",
-      "job_title": "Recruiter",
+      "job_title": "Customer Success Manager",
       "salary": 69000,
-      "benefits_selection": ["Dental Insurance", "Vision Insurance"]
+      "benefits_selection": ["Dental Insurance", "Vision Insurance"],
+      "managerId": 2,
+      "level": 4
     },
     {
       "id": 12,
@@ -128,9 +150,11 @@
       "password": "twinpeaks",
       "phone_number": "+1-555-0112",
       "profile_picture": "https://randomuser.me/api/portraits/women/12.jpg",
-      "job_title": "Content Writer",
+      "job_title": "Content Marketing Specialist",
       "salary": 55000,
-      "benefits_selection": ["Not Enrolled"]
+      "benefits_selection": ["Not Enrolled"],
+      "managerId": 2,
+      "level": 4
     },
     {
       "id": 13,
@@ -139,9 +163,11 @@
       "password": "thatswhatshesaid",
       "phone_number": "+1-555-0113",
       "profile_picture": "https://randomuser.me/api/portraits/men/19.jpg",
-      "job_title": "Branch Manager",
+      "job_title": "Operations Manager",
       "salary": 72000,
-      "benefits_selection": ["401k Account", "Health Insurance", "Life Insurance"]
+      "benefits_selection": ["401k Account", "Health Insurance", "Life Insurance"],
+      "managerId": 27,
+      "level": 4
     },
     {
       "id": 14,
@@ -150,9 +176,11 @@
       "password": "feelinggood",
       "phone_number": "+1-555-0114",
       "profile_picture": "https://randomuser.me/api/portraits/women/14.jpg",
-      "job_title": "Data Scientist",
+      "job_title": "Lead Data Scientist",
       "salary": 110000,
-      "benefits_selection": ["Health Insurance", "Vision Insurance"]
+      "benefits_selection": ["Health Insurance", "Vision Insurance"],
+      "managerId": 7,
+      "level": 3
     },
     {
       "id": 15,
@@ -161,9 +189,11 @@
       "password": "moonknight",
       "phone_number": "+1-555-0115",
       "profile_picture": "https://upload.wikimedia.org/wikipedia/commons/a/ac/Default_pfp.jpg",
-      "job_title": "Web Developer",
+      "job_title": "Senior Web Developer",
       "salary": 95000,
-      "benefits_selection": ["401k Account", "Dental Insurance"]
+      "benefits_selection": ["401k Account", "Dental Insurance"],
+      "managerId": 21,
+      "level": 6
     },
     {
       "id": 16,
@@ -172,9 +202,11 @@
       "password": "officeart",
       "phone_number": "+1-555-0116",
       "profile_picture": "https://randomuser.me/api/portraits/women/16.jpg",
-      "job_title": "Office Manager",
+      "job_title": "Executive Assistant",
       "salary": 62000,
-      "benefits_selection": ["Not Enrolled"]
+      "benefits_selection": ["Not Enrolled"],
+      "managerId": 3,
+      "level": 2
     },
     {
       "id": 17,
@@ -183,9 +215,11 @@
       "password": "illustrator",
       "phone_number": "+1-555-0117",
       "profile_picture": "https://randomuser.me/api/portraits/men/1.jpg",
-      "job_title": "Graphic Designer",
+      "job_title": "Graphic Design Specialist",
       "salary": 70000,
-      "benefits_selection": ["Health Insurance", "Vision Insurance"]
+      "benefits_selection": ["Health Insurance", "Vision Insurance"],
+      "managerId": 12,
+      "level": 5
     },
     {
       "id": 18,
@@ -194,9 +228,11 @@
       "password": "centralperk",
       "phone_number": "+1-555-0118",
       "profile_picture": "https://randomuser.me/api/portraits/women/18.jpg",
-      "job_title": "Fashion Designer",
+      "job_title": "UX Designer",
       "salary": 85000,
-      "benefits_selection": ["401k Account", "Dental Insurance"]
+      "benefits_selection": ["401k Account", "Dental Insurance"],
+      "managerId": 14,
+      "level": 4
     },
     {
       "id": 19,
@@ -205,9 +241,11 @@
       "password": "falcon",
       "phone_number": "+1-555-0119",
       "profile_picture": "https://randomuser.me/api/portraits/men/1.jpg",
-      "job_title": "Pilot",
-      "salary": 120000,
-      "benefits_selection": ["Health Insurance", "Life Insurance", "Vision Insurance"]
+      "job_title": "VP of Engineering",
+      "salary": 200000,
+      "benefits_selection": ["Health Insurance", "Life Insurance", "Vision Insurance"],
+      "managerId": 3,
+      "level": 2
     },
     {
       "id": 20,
@@ -216,9 +254,11 @@
       "password": "30rock",
       "phone_number": "+1-555-0120",
       "profile_picture": "https://randomuser.me/api/portraits/women/20.jpg",
-      "job_title": "Comedian",
-      "salary": 95000,
-      "benefits_selection": ["401k Account", "Dental Insurance"]
+      "job_title": "Marketing Coordinator",
+      "salary": 48000,
+      "benefits_selection": ["401k Account", "Dental Insurance"],
+      "managerId": 12,
+      "level": 5
     },
     {
       "id": 21,
@@ -227,9 +267,11 @@
       "password": "miller123",
       "phone_number": "+1-555-0121",
       "profile_picture": "https://randomuser.me/api/portraits/men/21.jpg",
-      "job_title": "Software Architect",
-      "salary": 105000,
-      "benefits_selection": ["Health Insurance", "Vision Insurance"]
+      "job_title": "Engineering Manager",
+      "salary": 125000,
+      "benefits_selection": ["Health Insurance", "Vision Insurance"],
+      "managerId": 19,
+      "level": 3
     },
     {
       "id": 22,
@@ -238,9 +280,11 @@
       "password": "terminator",
       "phone_number": "+1-555-0122",
       "profile_picture": "https://randomuser.me/api/portraits/women/22.jpg",
-      "job_title": "Cybersecurity Analyst",
+      "job_title": "Senior Security Analyst",
       "salary": 98000,
-      "benefits_selection": ["401k Account", "Dental Insurance"]
+      "benefits_selection": ["401k Account", "Dental Insurance"],
+      "managerId": 21,
+      "level": 6
     },
     {
       "id": 23,
@@ -249,9 +293,11 @@
       "password": "agent007",
       "phone_number": "+1-555-0123",
       "profile_picture": "https://randomuser.me/api/portraits/men/23.jpg",
-      "job_title": "Spy",
+      "job_title": "Security Specialist",
       "salary": 150000,
-      "benefits_selection": ["Health Insurance", "Life Insurance", "Vision Insurance"]
+      "benefits_selection": ["Health Insurance", "Life Insurance", "Vision Insurance"],
+      "managerId": 22,
+      "level": 7
     },
     {
       "id": 24,
@@ -260,9 +306,11 @@
       "password": "hermione",
       "phone_number": "+1-555-0124",
       "profile_picture": "https://randomuser.me/api/portraits/women/24.jpg",
-      "job_title": "Actress",
-      "salary": 130000,
-      "benefits_selection": ["401k Account", "Dental Insurance"]
+      "job_title": "Brand Manager",
+      "salary": 75000,
+      "benefits_selection": ["401k Account", "Dental Insurance"],
+      "managerId": 2,
+      "level": 4
     },
     {
       "id": 25,
@@ -271,9 +319,11 @@
       "password": "ironman",
       "phone_number": "+1-555-0125",
       "profile_picture": "https://randomuser.me/api/portraits/men/25.jpg",
-      "job_title": "Industrial Designer",
-      "salary": 90000,
-      "benefits_selection": ["Health Insurance", "Vision Insurance"]
+      "job_title": "Principal Designer",
+      "salary": 120000,
+      "benefits_selection": ["Health Insurance", "Vision Insurance"],
+      "managerId": 7,
+      "level": 3
     },
     {
       "id": 26,
@@ -282,9 +332,11 @@
       "password": "blackwidow",
       "phone_number": "+1-555-0126",
       "profile_picture": "https://randomuser.me/api/portraits/women/26.jpg",
-      "job_title": "Intelligence Analyst",
+      "job_title": "Business Intelligence Analyst",
       "salary": 85000,
-      "benefits_selection": ["401k Account", "Dental Insurance"]
+      "benefits_selection": ["401k Account", "Dental Insurance"],
+      "managerId": 14,
+      "level": 4
     },
     {
       "id": 27,
@@ -293,9 +345,11 @@
       "password": "batman",
       "phone_number": "+1-555-0127",
       "profile_picture": "https://randomuser.me/api/portraits/men/27.jpg",
-      "job_title": "Venture Capitalist",
+      "job_title": "Chief Operating Officer",
       "salary": 250000,
-      "benefits_selection": ["Health Insurance", "Life Insurance", "Vision Insurance"]
+      "benefits_selection": ["Health Insurance", "Life Insurance", "Vision Insurance"],
+      "managerId": 3,
+      "level": 2
     },
     {
       "id": 28,
@@ -304,9 +358,11 @@
       "password": "amazonian",
       "phone_number": "+1-555-0128",
       "profile_picture": "https://randomuser.me/api/portraits/women/28.jpg",
-      "job_title": "Ambassador",
-      "salary": 90000,
-      "benefits_selection": ["401k Account", "Dental Insurance"]
+      "job_title": "Junior Data Analyst",
+      "salary": 58000,
+      "benefits_selection": ["401k Account", "Dental Insurance"],
+      "managerId": 26,
+      "level": 5
     },
     {
       "id": 29,
@@ -315,9 +371,11 @@
       "password": "spiderman",
       "phone_number": "+1-555-0129",
       "profile_picture": "https://randomuser.me/api/portraits/men/29.jpg",
-      "job_title": "Photographer",
-      "salary": 70000,
-      "benefits_selection": ["Health Insurance", "Vision Insurance"]
+      "job_title": "Junior Designer",
+      "salary": 52000,
+      "benefits_selection": ["Health Insurance", "Vision Insurance"],
+      "managerId": 25,
+      "level": 4
     },
     {
       "id": 30,
@@ -326,9 +384,11 @@
       "password": "princess",
       "phone_number": "+1-555-0130",
       "profile_picture": "https://randomuser.me/api/portraits/women/30.jpg",
-      "job_title": "Senator",
+      "job_title": "Government Relations Manager",
       "salary": 100000,
-      "benefits_selection": ["401k Account", "Dental Insurance"]
+      "benefits_selection": ["401k Account", "Dental Insurance"],
+      "managerId": 27,
+      "level": 4
     },
     {
       "id": 31,
@@ -337,9 +397,11 @@
       "password": "jedi",
       "phone_number": "+1-555-0131",
       "profile_picture": "https://randomuser.me/api/portraits/men/31.jpg",
-      "job_title": "Jedi Master",
-      "salary": 120000,
-      "benefits_selection": ["Health Insurance", "Life Insurance", "Vision Insurance"]
+      "job_title": "Training Manager",
+      "salary": 85000,
+      "benefits_selection": ["Health Insurance", "Life Insurance", "Vision Insurance"],
+      "managerId": 4,
+      "level": 5
     },
     {
       "id": 32,
@@ -348,9 +410,11 @@
       "password": "lastjedi",
       "phone_number": "+1-555-0132",
       "profile_picture": "https://randomuser.me/api/portraits/women/32.jpg",
-      "job_title": "Sith Lord",
-      "salary": 130000,
-      "benefits_selection": ["401k Account", "Dental Insurance"]
+      "job_title": "Learning Specialist",
+      "salary": 65000,
+      "benefits_selection": ["401k Account", "Dental Insurance"],
+      "managerId": 31,
+      "level": 6
     },
     {
       "id": 33,
@@ -359,9 +423,11 @@
       "password": "pencil",
       "phone_number": "+1-555-0133",
       "profile_picture": "https://randomuser.me/api/portraits/men/33.jpg",
-      "job_title": "Hitman",
-      "salary": 200000,
-      "benefits_selection": ["Health Insurance", "Life Insurance", "Vision Insurance"]
+      "job_title": "Security Guard",
+      "salary": 45000,
+      "benefits_selection": ["Health Insurance", "Life Insurance", "Vision Insurance"],
+      "managerId": 23,
+      "level": 8
     },
     {
       "id": 34,
@@ -370,9 +436,11 @@
       "password": "brightest",
       "phone_number": "+1-555-0134",
       "profile_picture": "https://randomuser.me/api/portraits/women/34.jpg",
-      "job_title": "Potions Master",
-      "salary": 95000,
-      "benefits_selection": ["401k Account", "Dental Insurance"]
+      "job_title": "Research Assistant",
+      "salary": 48000,
+      "benefits_selection": ["401k Account", "Dental Insurance"],
+      "managerId": 14,
+      "level": 4
     },
     {
       "id": 35,
@@ -381,9 +449,11 @@
       "password": "chosen1",
       "phone_number": "+1-555-0135",
       "profile_picture": "https://randomuser.me/api/portraits/men/35.jpg",
-      "job_title": "Defense Against the Dark Arts Teacher",
-      "salary": 85000,
-      "benefits_selection": ["Health Insurance", "Vision Insurance"]
+      "job_title": "Junior Developer",
+      "salary": 72000,
+      "benefits_selection": ["Health Insurance", "Vision Insurance"],
+      "managerId": 21,
+      "level": 6
     },
     {
       "id": 36,
@@ -392,9 +462,11 @@
       "password": "mockingjay",
       "phone_number": "+1-555-0136",
       "profile_picture": "https://randomuser.me/api/portraits/women/36.jpg",
-      "job_title": "Survival Instructor",
-      "salary": 60000,
-      "benefits_selection": ["401k Account", "Dental Insurance"]
+      "job_title": "Training Coordinator",
+      "salary": 50000,
+      "benefits_selection": ["401k Account", "Dental Insurance"],
+      "managerId": 32,
+      "level": 7
     },
     {
       "id": 37,
@@ -403,9 +475,11 @@
       "password": "baker",
       "phone_number": "+1-555-0137",
       "profile_picture": "https://randomuser.me/api/portraits/men/37.jpg",
-      "job_title": "Master Baker",
-      "salary": 55000,
-      "benefits_selection": ["Health Insurance", "Vision Insurance"]
+      "job_title": "Facilities Assistant",
+      "salary": 42000,
+      "benefits_selection": ["Health Insurance", "Vision Insurance"],
+      "managerId": 5,
+      "level": 6
     },
     {
       "id": 38,
@@ -414,9 +488,11 @@
       "password": "faceless",
       "phone_number": "+1-555-0138",
       "profile_picture": "https://randomuser.me/api/portraits/women/38.jpg",
-      "job_title": "Assassin",
-      "salary": 95000,
-      "benefits_selection": ["401k Account", "Dental Insurance"]
+      "job_title": "Junior Security Analyst",
+      "salary": 55000,
+      "benefits_selection": ["401k Account", "Dental Insurance"],
+      "managerId": 23,
+      "level": 8
     },
     {
       "id": 39,
@@ -425,9 +501,11 @@
       "password": "knowsnothing",
       "phone_number": "+1-555-0139",
       "profile_picture": "https://randomuser.me/api/portraits/men/39.jpg",
-      "job_title": "Lord Commander",
-      "salary": 90000,
-      "benefits_selection": ["Health Insurance", "Life Insurance", "Vision Insurance"]
+      "job_title": "Night Shift Supervisor",
+      "salary": 48000,
+      "benefits_selection": ["Health Insurance", "Life Insurance", "Vision Insurance"],
+      "managerId": 33,
+      "level": 9
     },
     {
       "id": 40,
@@ -436,9 +514,11 @@
       "password": "dragonqueen",
       "phone_number": "+1-555-0140",
       "profile_picture": "https://randomuser.me/api/portraits/women/40.jpg",
-      "job_title": "Queen",
-      "salary": 250000,
-      "benefits_selection": ["401k Account", "Dental Insurance"]
+      "job_title": "Intern",
+      "salary": 35000,
+      "benefits_selection": ["Basic Health"],
+      "managerId": 39,
+      "level": 10
     }
   ]
 }
