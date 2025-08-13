@@ -59,6 +59,14 @@ const CustomerInformation = ({ customers, onRemoveCustomer }) => {
                     <p className="font-semibold">Benefits:</p>
                     <p>{customer.benefits_selection.join(", ")}</p>
                   </div>
+                  <div>
+                    <p className="font-semibold">Manager ID:</p>
+                    <p>{customer.managerId}</p>
+                  </div>
+                  <div>
+                    <p className="font-semibold">Level:</p>
+                    <p>{customer.level}</p>
+                  </div>
                 </div>
 
                 <div className="mt-4 flex justify-center">
