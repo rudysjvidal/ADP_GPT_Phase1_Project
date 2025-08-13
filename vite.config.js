@@ -5,11 +5,11 @@ export default defineConfig({
   preview: {
     host: '0.0.0.0',
     port: process.env.PORT || 4173,
-    allowedHosts: 'all',
+    allowedHosts: ['adp-customer-dashboard-react-project.onrender.com', '.onrender.com', 'localhost']
   },
   server: {
     host: '0.0.0.0',
-    allowedHosts: 'all',
+    allowedHosts: ['adp-customer-dashboard-react-project.onrender.com', '.onrender.com', 'localhost']
   },
   plugins: [react()]
 })
