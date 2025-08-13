@@ -47,3 +47,15 @@ app.get('/customers', async (req, res) => {
     res.status(500).json({ error: 'Failed to fetch data' });
   }
 });
+
+app.get('/users', async (req, res) => {
+  try {
+    const db = client.db(dbName);
+    const collection = db.collection(users);
+    const data = await collection.find({}).toArray();
+    res.json(data);
+  } catch (err) {
+    console.error("Error fetching users:", err);
+    res.status(500).json({ error: 'Failed to fetch users' });
+  }
+});

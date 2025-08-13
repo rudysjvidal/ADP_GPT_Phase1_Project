@@ -8,6 +8,12 @@
     background-color: #f0f0f0;
 }
 
+.login-header {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
 .login-input {
     width: 300px;
     padding: 10px;
@@ -17,16 +23,15 @@
 }
 
 .login-button {
-    width: 300px;
-    padding: 10px;
+    width: 75px;
+    padding: 8px 16px;
     margin-top: 10px;
-    background-color: #007bff;
-    color: white;
+    font-weight: 500;
+    background-color: #374151;
+    color: #60a5fa;
     border: none;
-    border-radius: 5px;
+    border-radius: 4px;
     cursor: pointer;
 }
 
-.login-button:hover {
-    background-color: #0056b3;
-}
+/* `px-4 py-2 rounded font-medium transition-all duration-300 text-blue-400 bg-slate-700` */
