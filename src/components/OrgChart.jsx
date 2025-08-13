@@ -25,6 +25,7 @@ function OrgChart() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [collapsedLevels, setCollapsedLevels] = useState(new Set());
+  const [customerLookup, setCustomerLookup] = useState({});
 
   const toggleLevel = (level) => {
     setCollapsedLevels(prev => {
@@ -47,6 +48,13 @@ function OrgChart() {
     setCollapsedLevels(new Set());
   };
 
+  const getManagerName = (managerId) => {
+    if (!managerId || !customerLookup[managerId]) {
+      return 'No Manager';
+    }
+    return customerLookup[managerId].name || 'Unknown Manager';
+  };
+
   useEffect(() => {
     async function loadData() {
       setLoading(true);
@@ -59,6 +67,13 @@ function OrgChart() {
         }
 
         if (Array.isArray(data) && data.length > 0) {
+          // Create lookup map for quick customer access by ID
+          const lookup = {};
+          data.forEach(customer => {
+            lookup[customer.id] = customer;
+          });
+          setCustomerLookup(lookup);
+          
           const levelsData = buildLevelStructure(data);
           setLevels(levelsData);
         } else {
@@ -144,28 +159,28 @@ function OrgChart() {
               {/* Level Content */}
               {!isCollapsed && (
                 <div className="flex flex-wrap justify-center gap-4">
-                  {levelPeople.map((person) => (
+                  {levelPeople.map((customer) => (
                     <div
-                      key={person.id}
+                      key={customer.id}
                       className="bg-white border border-gray-300 rounded-lg p-4 shadow-sm hover:shadow-md transition-shadow flex items-center min-w-[250px] max-w-[300px]"
                     >
                       <img
-                        src={person.profile_picture || '/api/placeholder/48/48'}
-                        alt={person.name || 'Unknown'}
+                        src={customer.profile_picture}
+                        alt={customer.name}
                         className="w-12 h-12 rounded-full mr-3 object-cover border-2 border-gray-200"
-                        onError={(e) => {
-                          e.target.src = '/api/placeholder/48/48';
-                        }}
                       />
                       <div className="flex-1">
                         <div className="font-semibold text-gray-900">
-                          {person.name || 'Unknown'}
+                          {customer.name}
                         </div>
                         <div className="text-sm text-gray-600">
-                          {person.job_title || 'No title'}
+                          {customer.job_title}
                         </div>
                         <div className="text-xs text-blue-600 font-medium">
-                          Level {person.level}
+                          Level {customer.level}
+                        </div>
+                        <div className="text-xs text-green-600 font-medium">
+                          Manager: {getManagerName(customer.managerId)}
                         </div>
                       </div>
                     </div>
