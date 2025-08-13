@@ -20,6 +20,8 @@ export default function UpdateCustomerForm() {
     profile_picture: "",
     job_title: "",
     salary: 0,
+    managerId: 0,
+    level: 0,
   });
   const [benefitsInput, setBenefitsInput] = useState("");  
   const [errors, setErrors] = useState({});
@@ -30,7 +32,7 @@ export default function UpdateCustomerForm() {
       const {
         name, email, password, phone_number,
         profile_picture, job_title, salary,
-        benefits_selection
+        benefits_selection, managerId, level
       } = current;
       setValues({
         name: name ?? "",
@@ -40,6 +42,9 @@ export default function UpdateCustomerForm() {
         profile_picture: profile_picture ?? "",
         job_title: job_title ?? "",
         salary: salary ?? 0,
+        managerId: managerId ?? 0,
+        level: level ?? 0,
+
       });
       setBenefitsInput((benefits_selection || []).join(", "));
     }
@@ -84,6 +89,8 @@ export default function UpdateCustomerForm() {
       job_title: values.job_title,
       salary: values.salary,
       benefits_selection: benefitsInput.split(",").map(s => s.trim()).filter(Boolean),
+      managerId: values.managerId,
+      level: values.level,
     };
     
 
@@ -153,6 +160,16 @@ export default function UpdateCustomerForm() {
             onChange={onChange}
             className="border p-2 rounded"
           />
+        </label>
+
+        <label className="grid gap-1">
+          <span>Manager ID</span>
+          <input name="managerId" type="number" value={values.managerId} onChange={onChange} className="border p-2 rounded" />
+        </label>
+
+        <label className="grid gap-1">
+          <span>Level</span>
+          <input name="level" type="number" value={values.level} onChange={onChange} className="border p-2 rounded" />
         </label>
 
         <div className="flex gap-2 mt-2">
