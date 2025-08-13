@@ -7,6 +7,7 @@ import Login from './components/Login';
 import UpdateCustomerForm from './components/UpdateCustomerForm';
 import {CookiesProvider} from 'react-cookie';
 import AuthorizeAccess from './components/AuthorizeAccess';
+import OrgChart from './components/OrgChart';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Navigate to="/dashboard" replace />} />
           <Route path="/dashboard" element={<Dashboard />}>
+          <Route path="orgchart" element={<OrgChart />} />
             <Route index element={<CustomerList />} />
             <Route path="add" element={
               <AuthorizeAccess>

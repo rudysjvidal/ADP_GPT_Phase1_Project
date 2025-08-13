@@ -9,7 +9,9 @@
       "profile_picture": "https://randomuser.me/api/portraits/women/1.jpg",
       "job_title": "Software Engineer",
       "salary": 95000,
-      "benefits_selection": ["401k Account", "Health Insurance", "Dental Insurance"]
+      "benefits_selection": ["401k Account", "Health Insurance", "Dental Insurance"],
+      "managerId": 19,
+      "level": 2
     },
     {
       "id": 2,
@@ -20,7 +22,9 @@
       "profile_picture": "https://upload.wikimedia.org/wikipedia/commons/a/ac/Default_pfp.jpg",
       "job_title": "Marketing Manager",
       "salary": 85000,
-      "benefits_selection": ["Health Insurance", "Vision Insurance"]
+      "benefits_selection": ["Health Insurance", "Vision Insurance"],
+      "managerId": 3,
+      "level": 2
     },
     {
       "id": 3,
@@ -31,7 +35,9 @@
       "profile_picture": "https://randomuser.me/api/portraits/men/3.jpg",
       "job_title": "Sales Associate",
       "salary": 60000,
-      "benefits_selection": ["401k Account", "Dental Insurance"]
+      "benefits_selection": ["401k Account", "Dental Insurance"],
+      "managerId": null,
+      "level": 2
     },
     {
       "id": 4,
@@ -42,7 +48,9 @@
       "profile_picture": "https://randomuser.me/api/portraits/women/4.jpg",
       "job_title": "HR Specialist",
       "salary": 72000,
-      "benefits_selection": ["Health Insurance", "Life Insurance", "Vision Insurance"]
+      "benefits_selection": ["Health Insurance", "Life Insurance", "Vision Insurance"],
+      "managerId": 3,
+      "level": 2
     },
     {
       "id": 5,
@@ -53,7 +61,9 @@
       "profile_picture": "https://upload.wikimedia.org/wikipedia/commons/a/ac/Default_pfp.jpg",
       "job_title": "Operations Analyst",
       "salary": 67000,
-      "benefits_selection": ["401k Account", "Long Term Disability Insurance"]
+      "benefits_selection": ["401k Account", "Long Term Disability Insurance"],
+      "managerId": 19,
+      "level": 2
     },
     {
       "id": 6,
@@ -64,7 +74,9 @@
       "profile_picture": "https://randomuser.me/api/portraits/women/6.jpg",
       "job_title": "Accountant",
       "salary": 78000,
-      "benefits_selection": ["Dental Insurance", "Vision Insurance"]
+      "benefits_selection": ["Dental Insurance", "Vision Insurance"],
+      "managerId": 3,
+      "level": 2
     },
     {
       "id": 7,
@@ -75,7 +87,9 @@
       "profile_picture": "https://upload.wikimedia.org/wikipedia/commons/a/ac/Default_pfp.jpg",
       "job_title": "Product Manager",
       "salary": 105000,
-      "benefits_selection": ["401k Account", "Health Insurance", "Life Insurance"]
+      "benefits_selection": ["401k Account", "Health Insurance", "Life Insurance"],
+      "managerId": 3,
+      "level": 8
     },
     {
       "id": 8,
@@ -86,7 +100,9 @@
       "profile_picture": "https://randomuser.me/api/portraits/women/8.jpg",
       "job_title": "Customer Support",
       "salary": 52000,
-      "benefits_selection": ["Not Enrolled"]
+      "benefits_selection": ["Not Enrolled"],
+      "managerId": 3,
+      "level": 2
     },
     {
       "id": 9,
@@ -97,7 +113,9 @@
       "profile_picture": "https://upload.wikimedia.org/wikipedia/commons/a/ac/Default_pfp.jpg",
       "job_title": "QA Engineer",
       "salary": 80000,
-      "benefits_selection": ["Health Insurance", "Dental Insurance", "Vision Insurance"]
+      "benefits_selection": ["Health Insurance", "Dental Insurance", "Vision Insurance"],
+      "managerId": 3,
+      "level": 2
     },
     {
       "id": 10,
@@ -108,7 +126,9 @@
       "profile_picture": "https://randomuser.me/api/portraits/women/10.jpg",
       "job_title": "Business Analyst",
       "salary": 90000,
-      "benefits_selection": ["401k Account", "Health Insurance"]
+      "benefits_selection": ["401k Account", "Health Insurance"],
+      "managerId": 3,
+      "level": 2
     },
     {
       "id": 11,
@@ -119,7 +139,9 @@
       "profile_picture": "https://upload.wikimedia.org/wikipedia/commons/a/ac/Default_pfp.jpg",
       "job_title": "Recruiter",
       "salary": 69000,
-      "benefits_selection": ["Dental Insurance", "Vision Insurance"]
+      "benefits_selection": ["Dental Insurance", "Vision Insurance"],
+      "managerId": 3,
+      "level": 2
     },
     {
       "id": 12,
@@ -130,7 +152,9 @@
       "profile_picture": "https://randomuser.me/api/portraits/women/12.jpg",
       "job_title": "Content Writer",
       "salary": 55000,
-      "benefits_selection": ["Not Enrolled"]
+      "benefits_selection": ["Not Enrolled"],
+      "managerId": 3,
+      "level": 2
     },
     {
       "id": 13,
@@ -141,7 +165,9 @@
       "profile_picture": "https://randomuser.me/api/portraits/men/19.jpg",
       "job_title": "Branch Manager",
       "salary": 72000,
-      "benefits_selection": ["401k Account", "Health Insurance", "Life Insurance"]
+      "benefits_selection": ["401k Account", "Health Insurance", "Life Insurance"],
+      "managerId": 3,
+      "level": 2
     },
     {
       "id": 14,
@@ -152,7 +178,9 @@
       "profile_picture": "https://randomuser.me/api/portraits/women/14.jpg",
       "job_title": "Data Scientist",
       "salary": 110000,
-      "benefits_selection": ["Health Insurance", "Vision Insurance"]
+      "benefits_selection": ["Health Insurance", "Vision Insurance"],
+      "managerId": 3,
+      "level": 2
     },
     {
       "id": 15,
@@ -163,7 +191,9 @@
       "profile_picture": "https://upload.wikimedia.org/wikipedia/commons/a/ac/Default_pfp.jpg",
       "job_title": "Web Developer",
       "salary": 95000,
-      "benefits_selection": ["401k Account", "Dental Insurance"]
+      "benefits_selection": ["401k Account", "Dental Insurance"],
+      "managerId": 3,
+      "level": 2
     },
     {
       "id": 16,
@@ -174,7 +204,9 @@
       "profile_picture": "https://randomuser.me/api/portraits/women/16.jpg",
       "job_title": "Office Manager",
       "salary": 62000,
-      "benefits_selection": ["Not Enrolled"]
+      "benefits_selection": ["Not Enrolled"],
+      "managerId": 3,
+      "level": 2
     },
     {
       "id": 17,
@@ -185,7 +217,9 @@
       "profile_picture": "https://randomuser.me/api/portraits/men/1.jpg",
       "job_title": "Graphic Designer",
       "salary": 70000,
-      "benefits_selection": ["Health Insurance", "Vision Insurance"]
+      "benefits_selection": ["Health Insurance", "Vision Insurance"],
+      "managerId": 3,
+      "level": 2
     },
     {
       "id": 18,
@@ -196,7 +230,9 @@
       "profile_picture": "https://randomuser.me/api/portraits/women/18.jpg",
       "job_title": "Fashion Designer",
       "salary": 85000,
-      "benefits_selection": ["401k Account", "Dental Insurance"]
+      "benefits_selection": ["401k Account", "Dental Insurance"],
+      "managerId": 3,
+      "level": 2
     },
     {
       "id": 19,
@@ -207,7 +243,9 @@
       "profile_picture": "https://randomuser.me/api/portraits/men/1.jpg",
       "job_title": "Pilot",
       "salary": 120000,
-      "benefits_selection": ["Health Insurance", "Life Insurance", "Vision Insurance"]
+      "benefits_selection": ["Health Insurance", "Life Insurance", "Vision Insurance"],
+      "managerId": 3,
+      "level": 2
     },
     {
       "id": 20,
@@ -218,7 +256,9 @@
       "profile_picture": "https://randomuser.me/api/portraits/women/20.jpg",
       "job_title": "Comedian",
       "salary": 95000,
-      "benefits_selection": ["401k Account", "Dental Insurance"]
+      "benefits_selection": ["401k Account", "Dental Insurance"],
+      "managerId": 3,
+      "level": 2
     },
     {
       "id": 21,
@@ -229,7 +269,9 @@
       "profile_picture": "https://randomuser.me/api/portraits/men/21.jpg",
       "job_title": "Software Architect",
       "salary": 105000,
-      "benefits_selection": ["Health Insurance", "Vision Insurance"]
+      "benefits_selection": ["Health Insurance", "Vision Insurance"],
+      "managerId": 3,
+      "level": 2
     },
     {
       "id": 22,
@@ -240,7 +282,9 @@
       "profile_picture": "https://randomuser.me/api/portraits/women/22.jpg",
       "job_title": "Cybersecurity Analyst",
       "salary": 98000,
-      "benefits_selection": ["401k Account", "Dental Insurance"]
+      "benefits_selection": ["401k Account", "Dental Insurance"],
+      "managerId": 3,
+      "level": 2
     },
     {
       "id": 23,
@@ -251,7 +295,9 @@
       "profile_picture": "https://randomuser.me/api/portraits/men/23.jpg",
       "job_title": "Spy",
       "salary": 150000,
-      "benefits_selection": ["Health Insurance", "Life Insurance", "Vision Insurance"]
+      "benefits_selection": ["Health Insurance", "Life Insurance", "Vision Insurance"],
+      "managerId": 3,
+      "level": 2
     },
     {
       "id": 24,
@@ -262,7 +308,9 @@
       "profile_picture": "https://randomuser.me/api/portraits/women/24.jpg",
       "job_title": "Actress",
       "salary": 130000,
-      "benefits_selection": ["401k Account", "Dental Insurance"]
+      "benefits_selection": ["401k Account", "Dental Insurance"],
+      "managerId": 3,
+      "level": 2
     },
     {
       "id": 25,
@@ -273,7 +321,9 @@
       "profile_picture": "https://randomuser.me/api/portraits/men/25.jpg",
       "job_title": "Industrial Designer",
       "salary": 90000,
-      "benefits_selection": ["Health Insurance", "Vision Insurance"]
+      "benefits_selection": ["Health Insurance", "Vision Insurance"],
+      "managerId": 3,
+      "level": 2
     },
     {
       "id": 26,
@@ -284,7 +334,9 @@
       "profile_picture": "https://randomuser.me/api/portraits/women/26.jpg",
       "job_title": "Intelligence Analyst",
       "salary": 85000,
-      "benefits_selection": ["401k Account", "Dental Insurance"]
+      "benefits_selection": ["401k Account", "Dental Insurance"],
+      "managerId": 3,
+      "level": 2
     },
     {
       "id": 27,
@@ -295,7 +347,9 @@
       "profile_picture": "https://randomuser.me/api/portraits/men/27.jpg",
       "job_title": "Venture Capitalist",
       "salary": 250000,
-      "benefits_selection": ["Health Insurance", "Life Insurance", "Vision Insurance"]
+      "benefits_selection": ["Health Insurance", "Life Insurance", "Vision Insurance"],
+      "managerId": 3,
+      "level": 2
     },
     {
       "id": 28,
@@ -306,7 +360,9 @@
       "profile_picture": "https://randomuser.me/api/portraits/women/28.jpg",
       "job_title": "Ambassador",
       "salary": 90000,
-      "benefits_selection": ["401k Account", "Dental Insurance"]
+      "benefits_selection": ["401k Account", "Dental Insurance"],
+      "managerId": 3,
+      "level": 2
     },
     {
       "id": 29,
@@ -317,7 +373,9 @@
       "profile_picture": "https://randomuser.me/api/portraits/men/29.jpg",
       "job_title": "Photographer",
       "salary": 70000,
-      "benefits_selection": ["Health Insurance", "Vision Insurance"]
+      "benefits_selection": ["Health Insurance", "Vision Insurance"],
+      "managerId": 3,
+      "level": 2
     },
     {
       "id": 30,
@@ -328,7 +386,9 @@
       "profile_picture": "https://randomuser.me/api/portraits/women/30.jpg",
       "job_title": "Senator",
       "salary": 100000,
-      "benefits_selection": ["401k Account", "Dental Insurance"]
+      "benefits_selection": ["401k Account", "Dental Insurance"],
+      "managerId": 3,
+      "level": 2
     },
     {
       "id": 31,
@@ -339,7 +399,9 @@
       "profile_picture": "https://randomuser.me/api/portraits/men/31.jpg",
       "job_title": "Jedi Master",
       "salary": 120000,
-      "benefits_selection": ["Health Insurance", "Life Insurance", "Vision Insurance"]
+      "benefits_selection": ["Health Insurance", "Life Insurance", "Vision Insurance"],
+      "managerId": 3,
+      "level": 2
     },
     {
       "id": 32,
@@ -350,7 +412,9 @@
       "profile_picture": "https://randomuser.me/api/portraits/women/32.jpg",
       "job_title": "Sith Lord",
       "salary": 130000,
-      "benefits_selection": ["401k Account", "Dental Insurance"]
+      "benefits_selection": ["401k Account", "Dental Insurance"],
+      "managerId": 3,
+      "level": 2
     },
     {
       "id": 33,
@@ -361,7 +425,9 @@
       "profile_picture": "https://randomuser.me/api/portraits/men/33.jpg",
       "job_title": "Hitman",
       "salary": 200000,
-      "benefits_selection": ["Health Insurance", "Life Insurance", "Vision Insurance"]
+      "benefits_selection": ["Health Insurance", "Life Insurance", "Vision Insurance"],
+      "managerId": 3,
+      "level": 2
     },
     {
       "id": 34,
@@ -372,7 +438,9 @@
       "profile_picture": "https://randomuser.me/api/portraits/women/34.jpg",
       "job_title": "Potions Master",
       "salary": 95000,
-      "benefits_selection": ["401k Account", "Dental Insurance"]
+      "benefits_selection": ["401k Account", "Dental Insurance"],
+      "managerId": 3,
+      "level": 2
     },
     {
       "id": 35,
@@ -383,7 +451,9 @@
       "profile_picture": "https://randomuser.me/api/portraits/men/35.jpg",
       "job_title": "Defense Against the Dark Arts Teacher",
       "salary": 85000,
-      "benefits_selection": ["Health Insurance", "Vision Insurance"]
+      "benefits_selection": ["Health Insurance", "Vision Insurance"],
+      "managerId": 3,
+      "level": 2
     },
     {
       "id": 36,
@@ -394,7 +464,9 @@
       "profile_picture": "https://randomuser.me/api/portraits/women/36.jpg",
       "job_title": "Survival Instructor",
       "salary": 60000,
-      "benefits_selection": ["401k Account", "Dental Insurance"]
+      "benefits_selection": ["401k Account", "Dental Insurance"],
+      "managerId": 3,
+      "level": 2
     },
     {
       "id": 37,
@@ -405,7 +477,9 @@
       "profile_picture": "https://randomuser.me/api/portraits/men/37.jpg",
       "job_title": "Master Baker",
       "salary": 55000,
-      "benefits_selection": ["Health Insurance", "Vision Insurance"]
+      "benefits_selection": ["Health Insurance", "Vision Insurance"],
+      "managerId": 3,
+      "level": 2
     },
     {
       "id": 38,
@@ -416,7 +490,9 @@
       "profile_picture": "https://randomuser.me/api/portraits/women/38.jpg",
       "job_title": "Assassin",
       "salary": 95000,
-      "benefits_selection": ["401k Account", "Dental Insurance"]
+      "benefits_selection": ["401k Account", "Dental Insurance"],
+      "managerId": 3,
+      "level": 2
     },
     {
       "id": 39,
@@ -427,7 +503,9 @@
       "profile_picture": "https://randomuser.me/api/portraits/men/39.jpg",
       "job_title": "Lord Commander",
       "salary": 90000,
-      "benefits_selection": ["Health Insurance", "Life Insurance", "Vision Insurance"]
+      "benefits_selection": ["Health Insurance", "Life Insurance", "Vision Insurance"],
+      "managerId": 3,
+      "level": 2
     },
     {
       "id": 40,
@@ -438,7 +516,9 @@
       "profile_picture": "https://randomuser.me/api/portraits/women/40.jpg",
       "job_title": "Queen",
       "salary": 250000,
-      "benefits_selection": ["401k Account", "Dental Insurance"]
+      "benefits_selection": ["401k Account", "Dental Insurance"],
+      "managerId": 3,
+      "level": 2
     }
   ]
 }
