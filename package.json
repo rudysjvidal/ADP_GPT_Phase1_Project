@@ -11,7 +11,7 @@
     "serve": "vite preview",
     "clean": "rm -rf node_modules package-lock.json",
     "fresh-install": "npm run clean && npm install",
-    "start": "node server.js"
+    "start": "vite preview --host 0.0.0.0"
   },
   "repository": {
     "type": "git",
