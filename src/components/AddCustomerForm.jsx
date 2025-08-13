@@ -14,6 +14,8 @@ export default function AddCustomerForm() {
     job_title: "",
     salary: "",
     benefits_selection: [],
+    managerID: "",
+    level: "",
   });
   const [errors, setErrors] = useState({});
 
@@ -40,6 +42,7 @@ export default function AddCustomerForm() {
     if (!values.password.trim()) e.password = "Password is required.";
     if (values.profile_picture && !/^https?:\/\//i.test(values.profile_picture)) e.profile_picture = "Must be a URL.";
     if (values.salary !== "" && (isNaN(values.salary) || values.salary < 0)) e.salary = "Salary must be a positive number.";
+    if (values.managerID !== "" && (isNaN(values.managerID) || values.managerID < 0)) e.managerID = "ManagerID must be a positive number.";
     setErrors(e);
     return Object.keys(e).length === 0;
   };

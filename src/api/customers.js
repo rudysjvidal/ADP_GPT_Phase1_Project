@@ -1,4 +1,4 @@
-const baseURL = "http://localhost:4000/customers";
+const baseURL = "https://adp-gpt-phase1-project-backend.onrender.com/customers";
 
 export async function getAll() {
   const res = await fetch(baseURL);
