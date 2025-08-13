@@ -14,7 +14,7 @@ export default function AddCustomerForm() {
     job_title: "",
     salary: "",
     benefits_selection: [],
-    managerID: "",
+    managerId: "",
     level: "",
   });
   const [errors, setErrors] = useState({});
@@ -42,7 +42,9 @@ export default function AddCustomerForm() {
     if (!values.password.trim()) e.password = "Password is required.";
     if (values.profile_picture && !/^https?:\/\//i.test(values.profile_picture)) e.profile_picture = "Must be a URL.";
     if (values.salary !== "" && (isNaN(values.salary) || values.salary < 0)) e.salary = "Salary must be a positive number.";
-    if (values.managerID !== "" && (isNaN(values.managerID) || values.managerID < 0)) e.managerID = "ManagerID must be a positive number.";
+    if (values.managerId !== "" && (isNaN(values.managerId) || values.managerId < 0)) e.managerId = "ManagerID must be a positive number.";
+    if (values.level !== "" && (isNaN(values.level) || values.level < 0)) e.level = "Level must be a positive number.";
+
     setErrors(e);
     return Object.keys(e).length === 0;
   };
@@ -52,6 +54,7 @@ export default function AddCustomerForm() {
     if (!validate()) return;
 
     const payload = {
+      id: Date.now(),
       name: values.name.trim(),
       email: values.email.trim(),
       password: values.password,
@@ -60,6 +63,8 @@ export default function AddCustomerForm() {
       job_title: values.job_title.trim(),
       salary: values.salary,
       benefits_selection: benefitsInput.split(",").map(s => s.trim()).filter(Boolean),
+      managerId: values.managerId,
+      level: values.level,
     };
 
     await addCustomer(payload);
@@ -118,6 +123,18 @@ export default function AddCustomerForm() {
             onChange={onChange}
             className="border p-2 rounded"
           />
+        </label>
+
+        <label className="grid gap-1">
+          <span>Manager ID</span>
+          <input name="managerId" type="number" value={values.managerId} onChange={onChange} className="border p-2 rounded" />
+          {errors.managerId && <small className="text-red-600">{errors.managerId}</small>}
+        </label>
+
+        <label className="grid gap-1">
+          <span>Level</span>
+          <input name="level" type="number" value={values.level} onChange={onChange} className="border p-2 rounded" />
+          {errors.level && <small className="text-red-600">{errors.level}</small>}
         </label>
 
 
