@@ -36,19 +36,19 @@ const Login = () => {
             <NavigationBar />
             <div className={'login-container'}>
                 <h1 className={'login-header'}>Login</h1>
-                <input type={'text'}
-                    name={'username'}
-                    placeholder={'username'}
+                <input type='text'
+                    name='username'
+                    placeholder='username'
                     onChange={(e) => setUsername(e.target.value)}
-                    className={'login-input'}
+                    className='login-input'
                     autoComplete='off'
                 />
                 <div />
-                <input type={'text'}
-                    name={'password'}
-                    placeholder={'password'}
+                <input type='text'
+                    name='password'
+                    placeholder='password'
                     onChange={(e) => setPassword(e.target.value)}
-                    className={'login-input'}
+                    className='login-input'
                     autoComplete='off'
                 />
                 <br />

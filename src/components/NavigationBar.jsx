@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { useCookies } from 'react-cookie'
+//import { useCookies } from 'react-cookie'
 
 const NavigationBar = () => {
   const location = useLocation();
