@@ -1,8 +1,16 @@
 import React from 'react'
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useOutletContext } from 'react-router-dom';
 
 const CustomerInformation = ({ customers, onRemoveCustomer }) => {
   const navigate = useNavigate();
+
+  const { customers: allCustomers } = useOutletContext();
+
+  const getManagerName = (managerId) => {
+    if (managerId == null) return null;
+    const manager = allCustomers?.find(c => String(c.id) === String(managerId));
+    return manager ? manager.name : null;
+  };
 
   if (customers.length === 0) {
     return (
@@ -60,8 +68,8 @@ const CustomerInformation = ({ customers, onRemoveCustomer }) => {
                     <p>{customer.benefits_selection.join(", ")}</p>
                   </div>
                   <div>
-                    <p className="font-semibold">Manager ID:</p>
-                    <p>{customer.managerId}</p>
+                    <p className="font-semibold">Reports to:</p>
+                    <p>{getManagerName(customer.managerId) ?? '—'}</p>
                   </div>
                   <div>
                     <p className="font-semibold">Level:</p>
