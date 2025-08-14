@@ -21,7 +21,7 @@ const Dashboard = () => {
   //Update Customer Handler
   const updateCustomer = async (cust) => {
     await customersApi.update(cust);
-    const data = await customersApi.getAll(); // ⬅ refetch fresh data from DB
+    const data = await customersApi.getAll(); // grabs new/updated data from api
     setCustomers(data);
   };
 
