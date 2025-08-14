@@ -20,8 +20,9 @@ const Dashboard = () => {
   
   //Update Customer Handler
   const updateCustomer = async (cust) => {
-    const updated = await customersApi.update(cust);
-    setCustomers(prev => prev.map(c => c.id === updated.id ? updated : c));
+    await customersApi.update(cust);
+    const data = await customersApi.getAll(); // ⬅ refetch fresh data from DB
+    setCustomers(data);
   };
 
   //Delete Customer Handler
