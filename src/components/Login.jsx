@@ -4,54 +4,56 @@ import NavigationBar from './NavigationBar'
 import { useNavigate } from 'react-router-dom'
 import './Login.css'
 // import { useCookies } from 'react-cookie'
-import * as usersApi from '../api/users';
+// import * as usersApi from '../api/users';
+import { loginBasic } from '../auth';
+
 
 const Login = () => {
-    const [username, setUsername] = useState('');
+    const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    //const [cookies, setCookie] = useCookies(['admin']);
-    const [users, setUsers] = useState([]);
+    const [error, setError] = useState('');
     const navigate = useNavigate();
 
-    useEffect(() => {
-        usersApi.getAll().then(setUsers);
-    }, []);
 
-    const handleLogin = () => {
-        const user = users.find((u)=> username === u.user && password === u.password )
-        //console.log(users[0].user, users[0].password)
-        console.log(username, password) 
-        if (user) {
-            sessionStorage.setItem('isAdmin', 'true');
-            console.log('User logged in successfully');
-            // setCookie(`admin`, true, { path: '/', maxAge: 3600, httpOnly: false });
-            navigate('/dashboard');
-        } else {
-            alert('Invalid username or password');
-        }
+    const handleLogin = async () => {
+    try {
+        await loginBasic({ email, password });
+        navigate("/dashboard");
+    } catch (e) {
+        setError("Invalid email or password");
+        console.error(e);
     }
+    };
+
 
     return (
         <>
             <NavigationBar />
             <div className={'login-container'}>
                 <h1 className={'login-header'}>Login</h1>
-                <input type={'text'}
-                    name={'username'}
-                    placeholder={'username'}
-                    onChange={(e) => setUsername(e.target.value)}
-                    className={'login-input'}
-                    autoComplete='off'
+                <input
+                    type="email"
+                    name="email"
+                    placeholder="email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    className="login-input"
+                    autoComplete="username"
                 />
                 <div />
-                <input type={'text'}
-                    name={'password'}
-                    placeholder={'password'}
+                <input
+                    type="password"
+                    name="password"
+                    placeholder="password"
+                    value={password}
                     onChange={(e) => setPassword(e.target.value)}
-                    className={'login-input'}
-                    autoComplete='off'
+                    className="login-input"
+                    autoComplete="current-password"
                 />
                 <br />
+
+                {error && <div style={{ color: 'crimson', marginBottom: 8 }}>{error}</div>}
+
 
                 <button onClick={handleLogin} className={'login-button'}>Login</button>
             </div>

@@ -1,17 +1,24 @@
 import React from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { useCookies } from 'react-cookie'
 
 const NavigationBar = () => {
   const location = useLocation();
+  const navigate = useNavigate();
   //const [cookies, updateCookie] = useCookies(['admin']);
 
+  const token = localStorage.getItem('access_token') || sessionStorage.getItem('access_token');
   const isAdmin = sessionStorage.getItem('isAdmin') === 'true';
+  const isLoggedIn = !!token || isAdmin;
+
 
   const handleLogout = () => {
     sessionStorage.removeItem('isAdmin');
     sessionStorage.removeItem('user');
+    sessionStorage.removeItem('access_token');
+    localStorage.removeItem('access_token');
     alert('User logged out successfully');
+    navigate('/login');
   }
 
 
@@ -29,9 +36,9 @@ const NavigationBar = () => {
                 ? 'text-blue-400 bg-slate-700'
                 : 'text-slate-300 hover:text-slate-100 hover:bg-slate-700'
                 }`}
-              onClick={() => { if (isAdmin) {handleLogout()} }}
+              onClick={() => { if (isLoggedIn) handleLogout(); }}
             >
-              {isAdmin ? 'Logout' : 'Login'}
+              {isLoggedIn ? 'Logout' : 'Login'}
             </Link>
             <Link
               to="/dashboard"
