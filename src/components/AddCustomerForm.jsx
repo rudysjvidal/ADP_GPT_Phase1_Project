@@ -14,18 +14,23 @@ export default function AddCustomerForm() {
     job_title: "",
     salary: "",
     benefits_selection: [],
+    registered_events: [],
     managerId: "",
     level: "",
   });
   const [errors, setErrors] = useState({});
 
   const [benefitsInput, setBenefitsInput] = useState("");
+  const [eventsInput, setEventsInput] = useState("");
+
 
   const onChange = (e) => {
     const { name, value } = e.target;
   
     if (name === "benefits_selection") {
       setBenefitsInput(value);
+    } else if (name === "registered_events"){
+      setEventsInput(value);
     } else if (name === "salary") {
       setValues((v) => ({ ...v, [name]: Number(value) }));
     } else {
@@ -54,7 +59,7 @@ export default function AddCustomerForm() {
     if (!validate()) return;
 
     const payload = {
-      id: Date.now(),
+      id: Math.floor(Date.now() / 1000),
       name: values.name.trim(),
       email: values.email.trim(),
       password: values.password,
@@ -63,12 +68,21 @@ export default function AddCustomerForm() {
       job_title: values.job_title.trim(),
       salary: values.salary,
       benefits_selection: benefitsInput.split(",").map(s => s.trim()).filter(Boolean),
+      registered_events: eventsInput.split(",").map(s => s.trim()).filter(Boolean),
       managerId: values.managerId,
       level: values.level,
     };
 
-    await addCustomer(payload);
-    navigate("/dashboard");
+    // await addCustomer(payload);
+    // navigate("/dashboard");
+
+    const created = await addCustomer(payload);
+    if (created && (created._id || created.id)) {
+      navigate("/dashboard");
+    } else {
+      navigate("/dashboard", { replace: true });
+      setTimeout(() => window.location.reload(), 0);
+    }
   };
 
   return (
@@ -120,6 +134,16 @@ export default function AddCustomerForm() {
           <input
             name="benefits_selection"
             value={benefitsInput}
+            onChange={onChange}
+            className="border p-2 rounded"
+          />
+        </label>
+
+        <label className="grid gap-1">
+          <span>Registered Events (comma separated)</span>
+          <input
+            name="registered_events"
+            value={eventsInput}
             onChange={onChange}
             className="border p-2 rounded"
           />

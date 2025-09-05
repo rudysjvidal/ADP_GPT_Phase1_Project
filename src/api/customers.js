@@ -42,7 +42,7 @@ export async function create(customer) {
 
 // call to update customer
 export async function update(customer) {
-  const res = await authFetch(`${baseURL}/${customer.id}`, {
+  const res = await authFetch(`${baseURL}/${customer._id}`, {
     method: "PUT",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(customer),
