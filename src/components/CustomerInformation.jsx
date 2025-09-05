@@ -68,6 +68,10 @@ const CustomerInformation = ({ customers, onRemoveCustomer }) => {
                     <p>{customer.benefits_selection.join(", ")}</p>
                   </div>
                   <div>
+                    <p className="font-semibold">Events:</p>
+                    <p>{customer.registered_events.join(", ")}</p>
+                  </div>
+                  <div>
                     <p className="font-semibold">Reports to:</p>
                     <p>{getManagerName(customer.managerId) ?? '—'}</p>
                   </div>
@@ -79,7 +83,7 @@ const CustomerInformation = ({ customers, onRemoveCustomer }) => {
 
                 <div className="mt-4 flex justify-center">
                   <button
-                    onClick={() => navigate(`/dashboard/${customer.id}/update`)}
+                    onClick={() => navigate(`/dashboard/${customer._id}/update`)}
                     className="px-3 py-1 bg-amber-600 text-white rounded"
                   >
                     Update

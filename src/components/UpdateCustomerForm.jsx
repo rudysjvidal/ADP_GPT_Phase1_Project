@@ -8,7 +8,7 @@ export default function UpdateCustomerForm() {
 
   // finding the record by its id
   const current = useMemo(
-    () => customers.find(c => String(c.id) === String(id)),
+    () => customers.find(c => String(c._id) === String(id)),
     [customers, id]
   );
 
@@ -24,6 +24,7 @@ export default function UpdateCustomerForm() {
     level: 0,
   });
   const [benefitsInput, setBenefitsInput] = useState("");  
+  const [eventsInput, setEventsInput] = useState("");  
   const [errors, setErrors] = useState({});
 
   // prefill form when we find the record
@@ -32,7 +33,7 @@ export default function UpdateCustomerForm() {
       const {
         name, email, password, phone_number,
         profile_picture, job_title, salary,
-        benefits_selection, managerId, level
+        benefits_selection, registered_events, managerId, level
       } = current;
       setValues({
         name: name ?? "",
@@ -47,6 +48,8 @@ export default function UpdateCustomerForm() {
 
       });
       setBenefitsInput((benefits_selection || []).join(", "));
+      setEventsInput((registered_events || []).join(", "));
+
     }
   }, [current]);
   
@@ -56,6 +59,8 @@ export default function UpdateCustomerForm() {
   
     if (name === "benefits_selection") {
       setBenefitsInput(value);
+    } else if (name === "registered_events"){
+      setEventsInput(value);
     } else if (name === "salary") {
       setValues(v => ({ ...v, salary: Number(value) }));
     } else {
@@ -89,6 +94,7 @@ export default function UpdateCustomerForm() {
       job_title: values.job_title,
       salary: values.salary,
       benefits_selection: benefitsInput.split(",").map(s => s.trim()).filter(Boolean),
+      registered_events: eventsInput.split(",").map(s => s.trim()).filter(Boolean),
       managerId: values.managerId,
       level: values.level,
     };
@@ -101,8 +107,10 @@ export default function UpdateCustomerForm() {
   const handleDelete = async () => {
     if (!current) return;
     if (confirm(`Delete ${current.name}?`)) {
-      await deleteCustomer(current.id);
-      navigate("/dashboard");
+      await deleteCustomer(current._id);
+      navigate("/dashboard", { replace: true });
+      setTimeout(() => window.location.reload(), 0);
+
     }
   };
 
@@ -152,11 +160,22 @@ export default function UpdateCustomerForm() {
           <span>Salary</span>
           <input name="salary" type="number" value={values.salary} onChange={onChange} className="border p-2 rounded" />
         </label>
+
         <label className="grid gap-1">
           <span>Benefits Selection (comma separated)</span>
           <input
             name="benefits_selection"
             value={benefitsInput}
+            onChange={onChange}
+            className="border p-2 rounded"
+          />
+        </label>
+
+        <label className="grid gap-1">
+          <span>Events Selection (comma separated)</span>
+          <input
+            name="registered_events"
+            value={eventsInput}
             onChange={onChange}
             className="border p-2 rounded"
           />
