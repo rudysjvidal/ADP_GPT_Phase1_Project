@@ -4,14 +4,14 @@ const API_BASE = "http://localhost:8000";
 const baseURL  = `${API_BASE}/api/customers`;
 
 
-
 async function authFetch(url, init = {}) {
-  const token = getToken();               // token comes from login()
+  const token = getToken(); // grab token from login
   const headers = new Headers(init.headers || {});
   if (!headers.has("Accept")) headers.set("Accept", "application/json");
   if (token) headers.set("Authorization", `Bearer ${token}`);
   return fetch(url, { ...init, headers });
 }
+
 
 async function parse(res) {
   if (!res.ok) {
