@@ -8,6 +8,9 @@ import UpdateCustomerForm from './components/UpdateCustomerForm';
 // import {CookiesProvider} from 'react-cookie';
 import AuthorizeAccess from './components/AuthorizeAccess';
 import OrgChart from './components/OrgChart';
+import EventsWidget from "./components/EventsWidget";
+
+
 
 function App() {
   return (
@@ -33,6 +36,8 @@ function App() {
           <Route path="/login" element={<Login />} />
         </Routes>
       </div>
+    
+
     </Router>
     // </CookiesProvider>
   );
