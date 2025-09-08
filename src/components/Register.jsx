@@ -14,8 +14,10 @@ export default function Register() {
   async function onSubmit(e) {
     e.preventDefault();
     setErr("");
+    const id = Math.floor(Date.now() / 1000);
+
     try {
-      await register({ name: name.trim(), email: email.trim(), password });
+      await register({ id, name: name.trim(), email: email.trim(), password });
       // Log the user in after registering
       await loginBasic({ email: email.trim(), password });
       navigate("/dashboard");
@@ -25,19 +27,47 @@ export default function Register() {
   }
 
   return (
-    <>
+<>
       <NavigationBar />
-      <form onSubmit={onSubmit} className="max-w-md mx-auto p-6 space-y-3">
-        <h1 className="text-2xl font-semibold">Create account</h1>
-        <input className="border p-2 w-full" placeholder="Name" value={name}
-               onChange={e=>setName(e.target.value)} />
-        <input className="border p-2 w-full" type="email" placeholder="Email" value={email}
-               onChange={e=>setEmail(e.target.value)} autoComplete="username" />
-        <input className="border p-2 w-full" type="password" placeholder="Password" value={password}
-               onChange={e=>setPassword(e.target.value)} autoComplete="new-password" />
-        {err && <div className="text-red-600 text-sm">{err}</div>}
-        <button className="px-3 py-2 rounded bg-blue-600 text-white">Register</button>
-      </form>
+      <div className="login-container">
+        <form onSubmit={onSubmit} className="login-form">
+          <h1 className="login-header">Register</h1>
+
+          <input
+            className="login-input"
+            placeholder="Name"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+            autoComplete="name"
+          />
+
+          <input
+            type="email"
+            name="email"
+            placeholder="Email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            className="login-input"
+            autoComplete="username"
+          />
+
+          <input
+            type="password"
+            name="password"
+            placeholder="Password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            className="login-input"
+            autoComplete="new-password"
+          />
+
+          <br />
+
+          {err && <div style={{ color: "crimson", marginBottom: 8 }}>{err}</div>}
+
+          <button type="submit" className="register-button">Register</button>
+        </form>
+      </div>
     </>
   );
 }
