@@ -25,6 +25,16 @@ export async function getAll() {
   return parse(res);
 }
 
+export async function getByEmail(email){
+  const res = await authFetch(`${baseURL}/search?email=${email}`, { method: "GET" });
+  return parse(res);
+}
+
+export async function getManager(id){
+  const res = await authFetch(`${baseURL}/search?employee_id=${id}`, { method: "GET" });
+  return parse(res);  
+}
+
 // call to add customer
 export async function create(customer) {
   const res = await authFetch(baseURL, {

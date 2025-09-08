@@ -8,13 +8,15 @@ const AuthorizeAccess = ({children}) => {
     const token =
         localStorage.getItem('access_token') ||
         sessionStorage.getItem('access_token');
-    const isAdmin = sessionStorage.getItem('isAdmin') === 'true';
+    const isAdmin = localStorage.getItem('isAdmin') === 'true';
 
-    const isLoggedIn = !!token || isAdmin;
+    const isLoggedIn = !!token;
 
     // const [cookies] = useCookies(['admin']);
-    if (isLoggedIn) {
+    if (isAdmin && isLoggedIn) {
         return children;
+    } else if (!isAdmin && isLoggedIn) {
+        return <Navigate to="/dashboard" replace state={{ from: location }} />;
     } else {
         return <Navigate to="/login" replace state={{ from: location }} />;
     }

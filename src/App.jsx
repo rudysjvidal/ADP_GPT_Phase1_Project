@@ -19,7 +19,10 @@ function App() {
         <Routes>
           <Route path="/" element={<Navigate to="/dashboard" replace />} />
           <Route path="/dashboard" element={<Dashboard />}>
-          <Route path="orgchart" element={<OrgChart />} />
+          <Route path="orgchart" element={
+            <AuthorizeAccess>
+              <OrgChart />
+              </AuthorizeAccess>} />
             <Route index element={<CustomerList />} />
             <Route path="add" element={
               <AuthorizeAccess>

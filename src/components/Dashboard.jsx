@@ -8,11 +8,35 @@ import AuthorizeAccess from './AuthorizeAccess';
 
 const Dashboard = () => {
   const [customers, setCustomers] = useState([]);
+  const [visibleCustomers, setVisibleCustomers] = useState([]);
+  const isAdmin = localStorage.getItem('isAdmin') === 'true';
+  const username = localStorage.getItem("username");
 
   //Grabs all the Customer data
-  useEffect(() => {
-    customersApi.getAll().then(setCustomers);
-  }, []);
+  useEffect( () => {
+    async function fetchData(){
+
+      if (isAdmin){
+        const clist = await customersApi.getAll();
+        setCustomers(clist);
+        //setVisibleCustomers(clist);
+      } else{
+        const clist = await customersApi.getByEmail(username);
+        setCustomers([clist]);
+        //setVisibleCustomers(clist);
+        /* const filtered = clist.filter(c =>
+          c.email == username
+        );
+        console.log(filtered);
+        setVisibleCustomers(filtered); */
+      }      
+    }
+    fetchData();
+    
+      
+    }, []);
+  //console.log(customers);
+ 
   
   //Add Customer Handler
   const addCustomer = async (cust) => {
