@@ -9,6 +9,7 @@ import UpdateCustomerForm from './components/UpdateCustomerForm';
 import AuthorizeAccess from './components/AuthorizeAccess';
 import OrgChart from './components/OrgChart';
 import Register from './components/Register';
+import AdminAccess from './components/AdminAccess';
 
 
 
@@ -21,14 +22,14 @@ function App() {
           <Route path="/" element={<Navigate to="/dashboard" replace />} />
           <Route path="/dashboard" element={<Dashboard />}>
           <Route path="orgchart" element={
-            <AuthorizeAccess>
+            <AdminAccess>
               <OrgChart />
-              </AuthorizeAccess>} />
+              </AdminAccess>} />
             <Route index element={<CustomerList />} />
             <Route path="add" element={
-              <AuthorizeAccess>
+              <AdminAccess>
                 <AddCustomerForm />
-              </AuthorizeAccess>
+              </AdminAccess>
               } />
             <Route path=":id/update" element={
               <AuthorizeAccess>
