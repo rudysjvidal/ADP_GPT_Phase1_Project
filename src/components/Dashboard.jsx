@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { Outlet } from 'react-router-dom';
 import NavigationBar from './NavigationBar'
+import EventCard from './EventCard';
 //import CustomerList from './CustomerList'
 import * as customersApi from '../api/customers';
+import AuthorizeAccess from './AuthorizeAccess';
 
 const Dashboard = () => {
   const [customers, setCustomers] = useState([]);
@@ -45,6 +47,10 @@ const Dashboard = () => {
           </div>
         </div>
       </div>
+      <AuthorizeAccess>
+        <EventCard/>
+      </AuthorizeAccess>
+      
     </div>
   )
 }
