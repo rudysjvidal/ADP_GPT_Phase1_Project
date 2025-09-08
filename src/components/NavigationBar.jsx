@@ -23,18 +23,18 @@ const NavigationBar = () => {
 
 
   return (
-    <nav className="bg-slate-800 p-4 shadow-md sticky top-0 z-50">
+    <nav className="bg-[#7B6FB4] p-4 shadow-md sticky top-0 z-50">
       <div className="max-w-7xl mx-auto flex justify-between items-center px-8">
         <div className="nav-brand">
-          <h2 className="text-slate-100 text-2xl font-semibold">ADP System</h2>
+          <h2 className="text-[#fff] text-2xl font-semibold">HR Express</h2>
         </div>
         <ul className="flex space-x-8">
           <li>
             <Link
               to={isAdmin ? "/dashboard" : "/login"}
               className={`px-4 py-2 rounded font-medium transition-all duration-300 ${location.pathname === '/login'
-                ? 'text-blue-400 bg-slate-700'
-                : 'text-slate-300 hover:text-slate-100 hover:bg-slate-700'
+                ? 'text-[#fff] bg-[#000000]'
+                : 'text-[#fff] hover:text-slate-100 hover:bg-[#000000]'
                 }`}
               onClick={() => { if (isLoggedIn) handleLogout(); }}
             >
@@ -43,8 +43,8 @@ const NavigationBar = () => {
             <Link
               to="/dashboard"
               className={`px-4 py-2 rounded font-medium transition-all duration-300 ${location.pathname === '/dashboard'
-                ? 'text-blue-400 bg-slate-700'
-                : 'text-slate-300 hover:text-slate-100 hover:bg-slate-700'
+                ? 'text-[#fff] bg-[#000000]'
+                : 'text-[#fff] hover:text-slate-100 hover:bg-[#000000]'
                 }`}
             >
               Dashboard
@@ -52,8 +52,8 @@ const NavigationBar = () => {
             <Link
                 to="/dashboard/orgchart"
                 className={`px-4 py-2 rounded font-medium transition-all duration-300 ${location.pathname === '/dashboard/orgchart'
-                  ? 'text-blue-400 bg-slate-700'
-                  : 'text-slate-300 hover:text-slate-100 hover:bg-slate-700'
+                  ? 'text-[#fff] bg-[#000000]'
+                  : 'text-[#fff] hover:text-slate-100 hover:bg-[#000000]'
                   }`}
             >
               Org Chart
