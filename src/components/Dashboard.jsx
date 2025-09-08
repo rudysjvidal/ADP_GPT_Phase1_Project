@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Outlet } from 'react-router-dom';
 import NavigationBar from './NavigationBar'
 import EventCard from './EventCard';
+import MyEvents from './MyEvents';
 //import CustomerList from './CustomerList'
 import * as customersApi from '../api/customers';
 import AuthorizeAccess from './AuthorizeAccess';
@@ -42,7 +43,6 @@ const Dashboard = () => {
           <h1 className="text-slate-800 text-4xl font-bold mb-4">Dashboard</h1>
           <p className="text-slate-600 text-lg mb-8">Welcome to the ADP System Dashboard</p>
           <div className="bg-white rounded-lg shadow-sm border p-6">
-            <h2 className="text-xl font-semibold text-gray-900 mb-4">Customer List</h2>
             <Outlet context={{ customers, addCustomer, updateCustomer, deleteCustomer }} />
           </div>
           <h1 className="text-slate-800 text-3xl font-bold mb-4">Events</h1>

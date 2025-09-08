@@ -58,6 +58,15 @@ const NavigationBar = () => {
             >
               Org Chart
             </Link>
+            <Link
+                to="/dashboard/myevents"
+                className={`px-4 py-2 rounded font-medium transition-all duration-300 ${location.pathname === '/dashboard/myevents'
+                  ? 'text-[#fff] bg-[#000000]'
+                  : 'text-[#fff] hover:text-slate-100 hover:bg-[#000000]'
+                  }`}
+            >
+              My Events
+            </Link>
           </li>
         </ul>
       </div>

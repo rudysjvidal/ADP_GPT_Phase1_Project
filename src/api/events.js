@@ -11,15 +11,12 @@ async function authFetch(url, init = {}) {
   return fetch(url, { ...init, headers });
 }
 
+// looking for potential errors (anything that is not a response in the 200's)
 async function parse(res) {
-  if (!res.ok) {
-    const msg = await res.text().catch(() => "");
-    const www = res.headers.get("www-authenticate");
-    throw new Error(www || msg || `HTTP ${res.status}`);
-  }
-  const ct = res.headers.get("content-type") || "";
-  if (res.status === 204) return null;
-  return ct.includes("application/json") ? res.json() : res.text();
+  const body = await res.text().catch(() => "");
+  if (!res.ok) throw new Error(body || `HTTP ${res.status}`);
+  if (!body) return null;
+  try { return JSON.parse(body); } catch { return body; }
 }
 
 export async function getAll() {

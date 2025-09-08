@@ -90,9 +90,10 @@ const CustomerList = () => {
 
   return (
     <div className="flex min-h-96">
+      
       <div className="w-3/10 border-r border-gray-300 p-5 flex flex-col">
       <div className="mb-4 flex flex-wrap items-center justify-between gap-x-3 gap-y-2">
-            <h3>Customer Names:</h3>
+            <h2 className="text-xl font-semibold text-gray-900 mb-4">Customer List</h2>
             <button
               onClick={() => navigate('/dashboard/add')}
               className="px-3 py-1 bg-green-600 text-white rounded"

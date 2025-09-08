@@ -32,7 +32,7 @@ export default function EventCard(){
         // grab cur customer 
 
         let customer = await getMe();
-        console.log(customer)
+        //console.log(customer)
         if(customer.status === 404){ 
           alert("login to register for events")
           return;
@@ -49,7 +49,7 @@ export default function EventCard(){
           await updateMe(updatedCustomer)
         }
         else{
-          alert("already signed up for this event")
+          alert("You have already signed up for this event.")
         }
 
         console.log(customer.registered_events)
