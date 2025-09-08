@@ -25,6 +25,11 @@ export async function getAll() {
   return parse(res);
 }
 
+export async function getMe(){
+  const res = await authFetch(`${baseURL}/me`, { method: "GET" });
+  return parse(res)
+}
+
 // call to add customer
 export async function create(customer) {
   const res = await authFetch(baseURL, {
@@ -39,6 +44,16 @@ export async function create(customer) {
 // call to update customer
 export async function update(customer) {
   const res = await authFetch(`${baseURL}/${customer._id}`, {
+    method: "PUT",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(customer),
+  });
+  return parse(res);
+}
+
+// call to update self (customer)
+export async function updateMe(customer) {
+  const res = await authFetch(`${baseURL}/me`, {
     method: "PUT",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(customer),
