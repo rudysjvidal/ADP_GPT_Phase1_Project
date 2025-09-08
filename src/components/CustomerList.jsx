@@ -4,8 +4,14 @@ import CustomerInformation from './CustomerInformation'
 import CustomerSearch from './CustomerSearch';
 
 const CustomerList = () => {
-  const { customers } = useOutletContext();
+  const { customers, visibleCustomers } = useOutletContext();
+  const isAdmin = localStorage.getItem('isAdmin') === 'true';
+  const username = localStorage.getItem("username");
   const navigate = useNavigate();
+
+
+  
+
 
   const [selectedCustomers, setSelectedCustomers] = useState([]);
   const [currentPage, setCurrentPage] = useState(0);
@@ -31,8 +37,12 @@ const CustomerList = () => {
 
   //   fetchCustomers();
   // }, []);
+  
 
   useEffect(() => {
+    //console.log(username);
+   
+    //console.log("Visible Customers: " + visibleCustomers);
     const updateCustomersPerPage = () => {
       const availableHeight = window.innerHeight - 300 // Account for header and padding
       const customerItemHeight = 50 // Approximate height per customer item
@@ -91,11 +101,12 @@ const CustomerList = () => {
   return (
     <div className="flex min-h-96">
       <div className="w-3/10 border-r border-gray-300 p-5 flex flex-col">
-      <div className="mb-4 flex flex-wrap items-center justify-between gap-x-3 gap-y-2">
+      <div className="mb-4 flex flex-wrap items-center justify-between gap-x-3 gap-y-2" >
             <h3>Customer Names:</h3>
             <button
               onClick={() => navigate('/dashboard/add')}
               className="px-3 py-1 bg-green-600 text-white rounded"
+              hidden={!isAdmin}
             >
               Add
             </button>

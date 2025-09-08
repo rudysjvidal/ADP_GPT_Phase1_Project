@@ -72,8 +72,8 @@ const CustomerInformation = ({ customers, onRemoveCustomer }) => {
                     <p>{customer.registered_events.join(", ")}</p>
                   </div>
                   <div>
-                    <p className="font-semibold">Reports to:</p>
-                    <p>{getManagerName(customer.managerId) ?? '—'}</p>
+                    <p className="font-semibold">Manager ID:</p>
+                    <p>{customer.managerId ?? '—'}</p>
                   </div>
                   <div>
                     <p className="font-semibold">Level:</p>

@@ -30,7 +30,12 @@ export async function loginBasic({ email, password }) {
   } catch {}*/
 
   if (!token) throw new Error("Token missing in response");
-
+  const payload = JSON.parse(atob(token.split('.')[1])); // Decode the payload
+  const roles = payload.scope; // Access the roles field
+  const username = payload.sub;
+  const isAdmin = roles.includes("ROLE_ADMIN");
+  localStorage.setItem("username", username);
+  localStorage.setItem("isAdmin", isAdmin);
   localStorage.setItem(KEY, token);
   return token;
 }

@@ -1,10 +1,17 @@
 import { useEffect, useMemo, useState } from "react";
 import { useNavigate, useOutletContext, useParams } from "react-router-dom";
+import{ getMe, updateMe } from "../api/customers"
 
 export default function UpdateCustomerForm() {
-  const { customers, updateCustomer, deleteCustomer } = useOutletContext();
+  const { customers, me, updateCustomer, deleteCustomer } = useOutletContext();
+  
   const { id } = useParams();
   const navigate = useNavigate();
+
+  if (me._id != id){
+    navigate("/dashboard");
+  }
+
 
   // finding the record by its id
   const current = useMemo(
