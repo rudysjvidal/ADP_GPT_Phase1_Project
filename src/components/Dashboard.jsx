@@ -9,11 +9,38 @@ import AuthorizeAccess from './AuthorizeAccess';
 
 const Dashboard = () => {
   const [customers, setCustomers] = useState([]);
+  const [visibleCustomers, setVisibleCustomers] = useState([]);
+  const [me, setMe] = useState([]);
+  const isAdmin = localStorage.getItem('isAdmin') === 'true';
+  const username = localStorage.getItem("username");
 
   //Grabs all the Customer data
-  useEffect(() => {
-    customersApi.getAll().then(setCustomers);
-  }, []);
+  useEffect( () => {
+    async function fetchData(){
+
+      if (isAdmin){
+        const clist = await customersApi.getAll();
+        setCustomers(clist);
+        //setVisibleCustomers(clist);
+      } else{
+        const clist = await customersApi.getByEmail(username);
+        setCustomers([clist]);
+        //setVisibleCustomers(clist);
+        /* const filtered = clist.filter(c =>
+          c.email == username
+        );
+        console.log(filtered);
+        setVisibleCustomers(filtered); */
+      }
+      const current = await customersApi.getMe();      
+      setMe(current);
+    }
+    fetchData();
+    
+      
+    }, []);
+  //console.log(customers);
+ 
   
   //Add Customer Handler
   const addCustomer = async (cust) => {
@@ -43,7 +70,8 @@ const Dashboard = () => {
           <h1 className="text-slate-800 text-4xl font-bold mb-4">Dashboard</h1>
           <p className="text-slate-600 text-lg mb-8">Welcome to the ADP System Dashboard</p>
           <div className="bg-white rounded-lg shadow-sm border p-6">
-            <Outlet context={{ customers, addCustomer, updateCustomer, deleteCustomer }} />
+            <h2 className="text-xl font-semibold text-gray-900 mb-4">Customer List</h2>
+            <Outlet context={{ customers, me, addCustomer, updateCustomer, deleteCustomer }} />
           </div>
           <h1 className="text-slate-800 text-3xl font-bold mb-4">Events</h1>
           <EventCard/>

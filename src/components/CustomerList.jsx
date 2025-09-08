@@ -4,8 +4,14 @@ import CustomerInformation from './CustomerInformation'
 import CustomerSearch from './CustomerSearch';
 
 const CustomerList = () => {
-  const { customers } = useOutletContext();
+  const { customers, visibleCustomers } = useOutletContext();
+  const isAdmin = localStorage.getItem('isAdmin') === 'true';
+  const username = localStorage.getItem("username");
   const navigate = useNavigate();
+
+
+  
+
 
   const [selectedCustomers, setSelectedCustomers] = useState([]);
   const [currentPage, setCurrentPage] = useState(0);
@@ -31,8 +37,12 @@ const CustomerList = () => {
 
   //   fetchCustomers();
   // }, []);
+  
 
   useEffect(() => {
+    //console.log(username);
+   
+    //console.log("Visible Customers: " + visibleCustomers);
     const updateCustomersPerPage = () => {
       const availableHeight = window.innerHeight - 300 // Account for header and padding
       const customerItemHeight = 50 // Approximate height per customer item
@@ -97,6 +107,7 @@ const CustomerList = () => {
             <button
               onClick={() => navigate('/dashboard/add')}
               className="px-3 py-1 bg-green-600 text-white rounded"
+              hidden={!isAdmin}
             >
               Add
             </button>

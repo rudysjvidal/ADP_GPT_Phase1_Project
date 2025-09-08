@@ -2,7 +2,7 @@ import React from 'react';
 import { Navigate, useLocation } from 'react-router-dom';
 // import { useCookies } from 'react-cookie';
 
-const AuthorizeAccess = ({children}) => {
+const AdminAccess = ({children}) => {
     const location = useLocation();
 
     const token =
@@ -13,11 +13,13 @@ const AuthorizeAccess = ({children}) => {
     const isLoggedIn = !!token;
 
     // const [cookies] = useCookies(['admin']);
-    if (isLoggedIn) {
+    if (isAdmin && isLoggedIn) {
         return children;
+    } else if (!isAdmin && isLoggedIn) {
+        return <Navigate to="/dashboard" replace state={{ from: location }} />;
     } else {
         return <Navigate to="/login" replace state={{ from: location }} />;
     }
 }
 
-export default AuthorizeAccess;
+export default AdminAccess;
