@@ -15,13 +15,19 @@ export async function loginBasic({ email, password }) {
   });
 
   const text = (await res.text()).trim();
-  if (!res.ok) throw new Error(text || `Login failed (${res.status})`);
+
+  // For debugging if needed
+  /*if (!res.ok) throw new Error(text || `Login failed (${res.status})`);*/
+
+  if (!res.ok) throw new Error(`Login failed.`);
 
   let token = text;
-  try {
+  
+  // If we recieve json instead of plantext use below
+  /*try {
     const data = JSON.parse(text);
     token = data.access_token || data.token || data.jwt || data.id_token || "";
-  } catch {}
+  } catch {}*/
 
   if (!token) throw new Error("Token missing in response");
 
@@ -31,4 +37,4 @@ export async function loginBasic({ email, password }) {
 
 export function getToken() {
   return localStorage.getItem(KEY);
-}
+} 

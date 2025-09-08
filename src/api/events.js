@@ -1,8 +1,7 @@
 import { getToken } from "../auth";
 
 const API_BASE = "http://localhost:8000";
-const baseURL  = `${API_BASE}/api/customers`;
-
+const baseURL  = `${API_BASE}/api/events`;
 
 async function authFetch(url, init = {}) {
   const token = getToken(); // grab token from login
@@ -12,12 +11,15 @@ async function authFetch(url, init = {}) {
   return fetch(url, { ...init, headers });
 }
 
-// looking for potential errors (anything that is not a response in the 200's)
 async function parse(res) {
-  const body = await res.text().catch(() => "");
-  if (!res.ok) throw new Error(body || `HTTP ${res.status}`);
-  if (!body) return null;
-  try { return JSON.parse(body); } catch { return body; }
+  if (!res.ok) {
+    const msg = await res.text().catch(() => "");
+    const www = res.headers.get("www-authenticate");
+    throw new Error(www || msg || `HTTP ${res.status}`);
+  }
+  const ct = res.headers.get("content-type") || "";
+  if (res.status === 204) return null;
+  return ct.includes("application/json") ? res.json() : res.text();
 }
 
 export async function getAll() {
@@ -25,29 +27,25 @@ export async function getAll() {
   return parse(res);
 }
 
-// call to add customer
-export async function create(customer) {
+export async function create(event) {
   const res = await authFetch(baseURL, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify(customer),
+    body: JSON.stringify(event),
   });
-  return parse(res);
+  return parse(res); // expect saved event JSON (with _id)
 }
 
-
-// call to update customer
-export async function update(customer) {
-  const res = await authFetch(`${baseURL}/${customer._id}`, {
+// Use _id here. If your backend uses `id` instead, change to event.id.
+export async function update(event) {
+  const res = await authFetch(`${baseURL}/${event._id}`, {
     method: "PUT",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify(customer),
+    body: JSON.stringify(event),
   });
   return parse(res);
 }
 
-
-// call to remove customer
 export async function remove(id) {
   const res = await authFetch(`${baseURL}/${id}`, { method: "DELETE" });
   await parse(res);
