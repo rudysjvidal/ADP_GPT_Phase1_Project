@@ -9,6 +9,8 @@ import UpdateCustomerForm from './components/UpdateCustomerForm';
 import AuthorizeAccess from './components/AuthorizeAccess';
 import OrgChart from './components/OrgChart';
 
+
+
 function App() {
   return (
     // <CookiesProvider>
@@ -33,6 +35,8 @@ function App() {
           <Route path="/login" element={<Login />} />
         </Routes>
       </div>
+    
+
     </Router>
     // </CookiesProvider>
   );
