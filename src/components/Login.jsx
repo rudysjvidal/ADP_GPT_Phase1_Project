@@ -50,6 +50,17 @@ const Login = () => {
                     className="login-input"
                     autoComplete="current-password"
                 />
+
+                <div className="mt-3 text-sm text-slate-600">
+                    Don’t have an account?{" "}
+                    <button
+                        type="button"
+                        onClick={() => navigate("/register")}
+                        className="text-blue-600 hover:underline"
+                    >
+                        Register here
+                    </button>
+                </div>
                 <br />
 
                 {error && <div style={{ color: 'crimson', marginBottom: 8 }}>{error}</div>}
