@@ -5,11 +5,11 @@
   justify-content: center;
   height: 100vh;
 
-  /* soft, cool tints that complement #7392B7 */
 background: linear-gradient(135deg, #FFE7C7, #EAD9FF, #D9FFF2);
 
-  background-size: 200% 200%;
-  animation: gradientShift 18s ease infinite;
+  /* background-size: 200% 200%;
+  animation: gradientShift 18s ease infinite; */
+  animation: none;
 }
 
 @keyframes gradientShift {

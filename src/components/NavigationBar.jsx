@@ -34,7 +34,7 @@ const NavigationBar = () => {
               to={isAdmin ? "/dashboard" : "/login"}
               className={`px-4 py-2 rounded font-medium transition-all duration-300 ${location.pathname === '/login'
                 ? 'text-[#fff] bg-[#000000]'
-                : 'text-slate-300 hover:text-slate-100 hover:bg-[#000000]'
+                : 'text-[#fff] hover:text-slate-100 hover:bg-[#000000]'
                 }`}
               onClick={() => { if (isLoggedIn) handleLogout(); }}
             >
@@ -44,7 +44,7 @@ const NavigationBar = () => {
               to="/dashboard"
               className={`px-4 py-2 rounded font-medium transition-all duration-300 ${location.pathname === '/dashboard'
                 ? 'text-[#fff] bg-[#000000]'
-                : 'text-slate-300 hover:text-slate-100 hover:bg-[#000000]'
+                : 'text-[#fff] hover:text-slate-100 hover:bg-[#000000]'
                 }`}
             >
               Dashboard
@@ -53,7 +53,7 @@ const NavigationBar = () => {
                 to="/dashboard/orgchart"
                 className={`px-4 py-2 rounded font-medium transition-all duration-300 ${location.pathname === '/dashboard/orgchart'
                   ? 'text-[#fff] bg-[#000000]'
-                  : 'text-slate-300 hover:text-slate-100 hover:bg-[#000000]'
+                  : 'text-[#fff] hover:text-slate-100 hover:bg-[#000000]'
                   }`}
             >
               Org Chart
