@@ -45,11 +45,12 @@ const Dashboard = () => {
             <h2 className="text-xl font-semibold text-gray-900 mb-4">Customer List</h2>
             <Outlet context={{ customers, addCustomer, updateCustomer, deleteCustomer }} />
           </div>
+          <h1 className="text-slate-800 text-3xl font-bold mb-4">Events</h1>
+          <EventCard/>
         </div>
       </div>
-      <AuthorizeAccess>
-        <EventCard/>
-      </AuthorizeAccess>
+      
+       
       
     </div>
   )
