@@ -1,8 +1,10 @@
 import springbootimg from "../images/springboot.jpg";
+import savedEventImg from "../images/savedEvent.png"
 import React, { useEffect, useMemo, useState } from "react";
 import * as eventsApi from "../api/events";
 import { getMe } from "../api/customers";
 import NavigationBar from "./NavigationBar";
+
 
 export default function MyEvents() {
   const [events, setEvents] = useState([]);
@@ -52,7 +54,7 @@ export default function MyEvents() {
       ) : myEvents.map(ev => (
         <div key={ev._id || ev.id || ev.name}
              className="max-w-md rounded-2xl shadow-lg bg-white p-6 hover:shadow-xl transition-shadow duration-300">
-          <img src={springbootimg} alt="" className="rounded-md mb-3" />
+          <img src={savedEventImg} alt="" className="rounded-md mb-3" />
           <h2 className="text-xl font-bold text-gray-800 mb-2">{ev.name}</h2>
           <p className="text-sm text-gray-500 mb-1">
             📅 {ev.time} • 📍 Roseland, NJ

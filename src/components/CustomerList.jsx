@@ -111,7 +111,7 @@ const CustomerList = () => {
             >
               Add
             </button>
-          </div>        
+          </div>
         <div className="flex-1 overflow-y-auto">
           <ul className="list-none p-0">
             {currentCustomers.map((customer) => (

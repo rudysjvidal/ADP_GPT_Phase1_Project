@@ -13,7 +13,6 @@ import AdminAccess from './components/AdminAccess';
 import MyEvents from './components/MyEvents';
 
 
-
 function App() {
   return (
     // <CookiesProvider>

@@ -1,4 +1,6 @@
 import springbootimg from "../images/springboot.jpg"
+import newEventImg from "../images/newEvent.png"
+
 import { useState, useEffect } from "react";
 import { getToken } from "../auth"
 import { getAll } from "../api/events"
@@ -66,7 +68,7 @@ export default function EventCard(){
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
           {events.map((event) => (
             <div className="max-w-md rounded-2xl shadow-lg bg-white p-6 hover:shadow-xl transition-shadow duration-300">
-            <img src={springbootimg}></img>
+            <img src={newEventImg}></img>
             <h2 className="text-xl font-bold text-gray-800 mb-2">{event.name}</h2>
             <p className="text-sm text-gray-500 mb-1">
             📅 {event.time} • 📍 Roseland, NJ
