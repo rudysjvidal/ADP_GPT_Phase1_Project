@@ -7,8 +7,10 @@ export default function UpdateCustomerForm() {
   
   const { id } = useParams();
   const navigate = useNavigate();
+  const isAdmin = localStorage.getItem('isAdmin') === 'true';
 
-  if (me._id != id){
+
+  if (me._id != id && !isAdmin){
     navigate("/dashboard");
   }
 
