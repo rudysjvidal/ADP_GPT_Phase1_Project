@@ -51,8 +51,13 @@ const Dashboard = () => {
   //Update Customer Handler
   const updateCustomer = async (cust) => {
     await customersApi.update(cust);
-    const data = await customersApi.getAll(); // grabs new/updated data from api
-    setCustomers(data);
+    if (isAdmin){
+        const clist = await customersApi.getAll();
+        setCustomers(clist);
+      } else{
+        const clist = await customersApi.getByEmail(username);
+        setCustomers([clist]);
+      }
   };
 
   //Delete Customer Handler
